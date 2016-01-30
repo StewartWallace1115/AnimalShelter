@@ -1,20 +1,39 @@
-
+/*
+ * Name: Jordan Powell, Stewart Wallace
+ * Date: 1/29/2016
+ * email: Jordan Powell   - 
+ *        Stewart Wallace - swallace3644@g.fmarion.edu
+ * 
+ * Purpose: 
+ */
 public class Animal {
-	private String eyeColor;
-	private String name;
-	private String sex;
-	private String animalIDNumber;
-	private String animalType;
-	private String height;
-	private String weight;
+		private String eyeColor;
+		private String name;
+		private String sex;
+		private String animalIDNumber;
+		private String animalType;
+		private String height;
+		private String weight;
 	
 	Animal(){
-		
+		this.eyeColor = null;
+		this.name = null;
+		this.sex = null;
+		this.animalIDNumber = null;
+		this.animalType = null;
+		this.weight = null;
+		this.height = null;
 	}
 	
-	Animal(String eyeColor, String name){
+	Animal(String eyeColor, String name, String sex, String animalIDNumber,
+		   String animalType, String height, String weight){
 		this.eyeColor = eyeColor;
 		this.name = name;
+		this.sex = sex;
+		this.animalIDNumber = animalIDNumber;
+		this.animalType= animalType;
+		this.weight = weight;
+		this.height = height;
 	}
 
 	public String getEyeColor(){
