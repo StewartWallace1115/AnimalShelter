@@ -1,10 +1,13 @@
 /*
- * Name: Jordan Powell, Stewart Wallace
- * Date: 1/29/2016
+ * Name:  Jordan Powell, Stewart Wallace
+ * Date:  1/29/2016
  * email: Jordan Powell   - 
  *        Stewart Wallace - swallace3644@g.fmarion.edu
  * 
- * Purpose: 
+ * Purpose: The purpose of this class is to be a generalization for both pet and
+ * 			livestock. This class stores eye color, name, sex, animal ID number, 
+ * 			animal type, height, weight, altered and altered detail of the animal. 
+ * 			Class also contains setters and getters for the attributes. 
  */
 public class Animal {
 		private String eyeColor;
