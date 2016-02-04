@@ -18,6 +18,9 @@ public class Animal {
 		private String height;
 		private String weight;
 	
+	/*
+	 * The default constructor for Animal class.
+	 */
 	Animal(){
 		this.eyeColor = null;
 		this.name = null;
@@ -28,6 +31,11 @@ public class Animal {
 		this.height = null;
 	}
 	
+	/*
+	 * Constructor that accepts all of the attributes parameters for the class.
+	 * The parameters are all string and they're eyeColor, name, sex, animalIDNumber,
+	 * animalType, weight, and height.
+	 */
 	Animal(String eyeColor, String name, String sex, String animalIDNumber,
 		   String animalType, String height, String weight){
 		this.eyeColor = eyeColor;
@@ -38,59 +46,102 @@ public class Animal {
 		this.weight = weight;
 		this.height = height;
 	}
-
+	
+	/*
+	 * Returns eye color of the animal as a string.
+	 */
 	public String getEyeColor(){
 		return eyeColor;
 	}
-
+	
+	/*
+	 * Sets the eye color of the animal takes a string called 
+	 * eyeColor as the parameter.
+	 */
 	public void setEyeColor(String eyeColor){
 		this.eyeColor = eyeColor;
 	}
-
+	
+	/*
+	 * Returns the name of the animal as a string.
+	 */
 	public String getName(){
 		return name;
 	}
-
+	
+	/*
+	 * Sets the name of the animal. It accepts a String called name.
+	 */
 	public void setName(String name){
 		this.name = name;
 	}
-
+	
+	/*
+	 * Returns the sex of the animal as a String.
+	 */
 	public String getSex(){
 		return sex;
 	}
 
+	/*
+	 * Sets the sex of the animal as a String. It accepts a String called sex.
+	 */
 	public void setSex(String sex){
 		this.sex = sex;
 	}
-
+	
+	/*
+	 * Returns the animal ID number as a String.
+	 */
 	public String getAnimalIDNumber(){
 		return animalIDNumber;
 	}
-
+	
+	/*
+	 * Sets the animal ID Number. It accepts a string called animalIDNumber. 
+	 */
 	public void setAnimalIDNumber(String animalIDNumber){
 		this.animalIDNumber = animalIDNumber;
 	}
-
+	
+	/*
+	 * Returns the animal type as a string.
+	 */
 	public String getAnimalType(){
 		return animalType;
 	}
-
+	
+	/*
+	 * Sets animal type. It accepts a String called animalType
+	 */
 	public void setAnimalType(String animalType){
 		this.animalType = animalType;
 	}
-
+	
+	/*
+	 * Returns the animal's height as a string.
+	 */
 	public String getHeight(){
 		return height;
 	}
-
+	
+	/*
+	 * Sets animal's height. Accepts a string called height.
+	 */
 	public void setHeight(String height){
 		this.height = height;
 	}
-
+	
+	/*
+	 * Returns the animal's weight as a string.
+	 */
 	public String getWeight(){
 		return weight;
 	}
-
+	
+	/*
+	 * Sets animal's weight. Accepts a string called weight.
+	 */
 	public void setWeight(String weight){
 		this.weight = weight;
 	}
