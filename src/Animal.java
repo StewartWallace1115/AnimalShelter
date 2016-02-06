@@ -14,9 +14,11 @@ public class Animal {
 		private String name;
 		private String sex;
 		private String animalIDNumber;
-		private String animalType;
+		private String animalType; 		// Examples are cat, dog, and etc.
 		private String height;
 		private String weight;
+		private String animalBreed;		// Examples are beagle, calico and etc.
+		
 	
 	/*
 	 * The default constructor for Animal class.
@@ -144,5 +146,18 @@ public class Animal {
 	 */
 	public void setWeight(String weight){
 		this.weight = weight;
+	}
+	
+	/*
+	 * Returns the animal's animal breed.
+	 */
+	public String getAnimalBreed(){
+		return animalBreed;
+	}
+	/*
+	 * Sets animal's breed. Accepts a string called breed.
+	 */
+	public void setAnimalBreed(String animalBreed){
+		this.animalBreed = animalBreed;
 	}
 }
