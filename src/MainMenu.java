@@ -6,7 +6,10 @@
  * Purpose: This class outputs a menu. This class is the main navigation for the 
  * software.
  * 
- * Needs: A GUI and the menu options to go somewhere. 
+ * Needs: A GUI and the menu options to go somewhere. Finish animalIntakeMenu() 
+ * with animal class attributes. Add two more methods pet and livestock. Add 
+ * conditional to animalIntakeMenu for either pet or liveStock leading to 
+ * the correct method. 
  */
 
 import java.util.Scanner;
@@ -42,5 +45,19 @@ public class MainMenu {
 			         flag = false;
 			default: System.out.println(userInput + " wasn't an option");
 		}
+	}
+	
+	protected void animalIntakeMenu(){
+		Scanner keyboard = new Scanner(System.in);
+		System.out.println("Enter owner, if known:");
+		String ownerName = keyboard.nextLine();
+		
+		System.out.println("Enter where animal was located");
+		String location = keyboard.nextLine();
+		
+		System.out.println("Enter animal's height");
+		String height = keyboard.nextLine();
+		
+		
 	}
 }
