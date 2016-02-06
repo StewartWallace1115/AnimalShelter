@@ -1,5 +1,9 @@
 /*
- * This program implements the animal shelter project that was designed in CS313.
+ * Name: Jordan Powell, Stewart Wallace
+ * Date: 2/1/2016
+ * Email: swallace3644@g.fmarion.edu
+ * 		
+ * Purpose:This program implements the animal shelter project that was designed in CS313.
  */
 import java.sql.Connection;
 import java.sql.DriverManager;
