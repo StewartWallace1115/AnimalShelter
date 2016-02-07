@@ -18,7 +18,8 @@ public class AnimalShelterDemo {
 		    conn = DriverManager.getConnection("jdbc:mysql://localhost:3306"
 		    		+ "/?user=root&password=cs313drive&useSSL=false");
 
-
+		    MainMenu mainMenu = new MainMenu();
+		    mainMenu.displayMenu();
 		  
 		} catch (SQLException ex) {
 		   
