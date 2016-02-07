@@ -35,11 +35,27 @@ public class Animal {
 	
 	/*
 	 * Constructor that accepts all of the attributes parameters for the class.
+	 * The parameters are all string and they're eyeColor, name, sex, animalType, 
+	 * weight, and height. animalIDNumber is set to null.
+	 */
+	Animal(String eyeColor, String name, String sex,String animalBreed
+		   ,String animalType, String height, String weight){
+		this.eyeColor = eyeColor;
+		this.name = name;
+		this.sex = sex;
+		this.animalType= animalType;
+		this.weight = weight;
+		this.height = height;
+		this.animalBreed = animalBreed;
+		this.animalIDNumber = null;
+	}
+	/*
+	 * Constructor that accepts all of the attributes parameters for the class.
 	 * The parameters are all string and they're eyeColor, name, sex, animalIDNumber,
 	 * animalType, weight, and height.
 	 */
 	Animal(String eyeColor, String name, String sex, String animalIDNumber,
-		   String animalType, String height, String weight){
+		   String animalType, String height, String weight, String animalBreed){
 		this.eyeColor = eyeColor;
 		this.name = name;
 		this.sex = sex;
@@ -47,6 +63,7 @@ public class Animal {
 		this.animalType= animalType;
 		this.weight = weight;
 		this.height = height;
+		this.animalBreed = animalBreed;
 	}
 	
 	/*
