@@ -30,6 +30,13 @@ public class Pet extends Animal{
 		this.spayedNeutered = spayedNeutered;
 	}
 	
+	Pet(String eyeColor, String name, String sex, String animalType, String height, 
+			String weight, boolean spayedNeutered, String animalBreed){
+		
+		super(eyeColor, name, sex, animalBreed,animalType, height, weight);
+		this.spayedNeutered = spayedNeutered;
+	}
+	
 	/*
 	 * Returns a boolean value if the animal is either spayed or neutered. 
 	 */
