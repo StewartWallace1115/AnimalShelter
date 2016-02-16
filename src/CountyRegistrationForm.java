@@ -1,10 +1,11 @@
+
 import java.util.*;
 
 /*
  * Name: Jordan Powell, Stewart Wallace
  * Date: 2/8/2016
  * email: 	jpowell3617@g.fmarion.edu
- * 
+ * 			swallace3644@g.fmarion.edu
  * Purpose: This class holds the information for the County Registration Form. 
  */
 
@@ -14,7 +15,12 @@ public class CountyRegistrationForm
 	private Calendar dateRegistered;
 	private String tag;
 	private boolean certified;
-
+	
+	CountyRegistrationForm(){
+		dateRegistered = Calendar.getInstance();
+		
+	}
+	
 	public int getFee() 
 	{
 		return fee;
@@ -47,16 +53,23 @@ public class CountyRegistrationForm
 
 	public boolean isCertified()
 	{
-		return certified;
+		return certified; 
 	}
 	
-	/*public boolean isRegistrationComplete()
+	public boolean isRegistrationComplete()
 	{
 		return this.certified;
 	}
 	
-	public void isRegistrationOutdated()
+	public boolean isRegistrationOutdated()
 	{
+		Calendar nextYear = dateRegistered;
+		nextYear.add(Calendar.YEAR, 1);
 		
-	}*/
+		if(dateRegistered.compareTo(nextYear)>=0){
+			return true;
+		}else{
+			return false;
+		}
+	}
 }
