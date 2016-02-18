@@ -10,6 +10,7 @@
 public class Pet extends Animal{
 	//CageCard cageCard = null;
 	boolean spayedNeutered;
+	boolean microchip;
 	String animalNumber;
 	
 	/*
@@ -64,6 +65,10 @@ public class Pet extends Animal{
 	 */
 	public void setAnimalNumber(String animalNumber) {
 		this.animalNumber = animalNumber;
+	}
+	
+	public boolean haveMicrochip(){
+		return microchip;
 	}
 	
 	
