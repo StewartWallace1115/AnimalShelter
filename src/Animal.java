@@ -18,8 +18,16 @@ public class Animal {
 		private String height;
 		private String weight;
 		private String animalBreed;		// Examples are beagle, calico and etc.
-		
+		private String furColor;
 	
+	public String getFurColor() {
+			return furColor;
+		}
+
+		public void setFurColor(String furColor) {
+			this.furColor = furColor;
+		}
+
 	/*
 	 * The default constructor for Animal class.
 	 */
@@ -48,6 +56,7 @@ public class Animal {
 		this.height = height;
 		this.animalBreed = animalBreed;
 		this.animalIDNumber = null;
+	
 	}
 	/*
 	 * Constructor that accepts all of the attributes parameters for the class.
