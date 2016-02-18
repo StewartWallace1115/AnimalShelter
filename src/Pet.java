@@ -1,5 +1,5 @@
 /*
- * Name:  Jordan Powell, Stewart Wallace
+ * Name:  Stewart Wallace
  * Date:  1/29/2016
  * email: Jordan Powell   - 
  *        Stewart Wallace - swallace3644@g.fmarion.edu
