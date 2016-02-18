@@ -43,9 +43,6 @@ public class AnimalIntakeForm {
 		this.location = location;
 	}
 	
-	public void newOperation()
-	{
-		//This was in our UML diagram but i'm not sure what it does. 
-	}
+	
 }
 
