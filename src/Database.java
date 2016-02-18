@@ -1,10 +1,11 @@
 
 /*
- * Name: Jordan Powell, Stewart Wallace
+ * Name: Stewart Wallace
  * Date: 2/16/2016
  * email: swallace3644@g.fmarion.edu
  * 
- * Purpose: Create a superclass for database classes. 
+ * Purpose: Create a general database class that connects to the database. Other 
+ * database boundary classes will use this class to connect to the database.
  */
 
 import java.sql.Connection;
@@ -13,20 +14,31 @@ import java.sql.SQLException;
 
 public class Database {
 
-	public Connection connecting() {
-		try {
+	  private String MYSQL_DRIVER = "com.mysql.jdbc.Driver";
+	  private String MYSQL_URL = "jdbc:mysql://localhost:3306/animalshelter?useSSL=false";
+	  private String user = "root";
+	  private String password = "cs313drive";
+	  private Connection con;
+	  
 
-			Connection conn = DriverManager
-					.getConnection("jdbc:mysql://localhost:3306" + "/?user=root&password=cs313drive&useSSL=false");
-			return conn;
+	  public Connection MySqlConnection() {
 
-		} catch (SQLException ex) {
+	    try {
+	      Class.forName(MYSQL_DRIVER);
+	      System.out.println("Class Loaded....");
+	      con = DriverManager.getConnection(MYSQL_URL,user,password);
+	      System.out.println("Connected to the database....");
+	      return con;
+	      
 
-			System.out.println("SQLException: " + ex.getMessage());
-			System.out.println("SQLState: " + ex.getSQLState());
-			System.out.println("VendorError: " + ex.getErrorCode());
-		}
-		return null;
-	}
+	    } catch(ClassNotFoundException ex) {
+	       System.out.println("ClassNotFoundException:\n"+ex.toString());
+	       ex.printStackTrace();
 
+	    } catch(SQLException ex) {
+	        System.out.println("SQLException:\n"+ex.toString());
+	        ex.printStackTrace();
+	    }
+		return con;
+	  }
 }
