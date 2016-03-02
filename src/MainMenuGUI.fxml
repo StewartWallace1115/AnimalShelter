@@ -1,8 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane xmlns:fx="http://javafx.com/fxml/1">
-	<!-- TODO Add Nodes -->
+<AnchorPane prefHeight="431.0" prefWidth="465.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <TabPane layoutX="44.0" layoutY="44.0" prefHeight="200.0" prefWidth="368.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab text="Disposition">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Button layoutY="79.0" mnemonicParsing="false" text="Disposition form" />
+                              <Button layoutY="44.0" mnemonicParsing="false" text="Incident form" />
+                              <Button layoutY="15.0" mnemonicParsing="false" text="Display all pets" />
+                           </children></AnchorPane>
+                  </content>
+                </Tab>
+                <Tab text="Reclaimation">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Button layoutX="25.0" layoutY="115.0" mnemonicParsing="false" text="Search by " />
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                  <Tab text="Intake">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Button layoutX="7.0" layoutY="73.0" mnemonicParsing="false" text="Intake Form" />
+                              <Button layoutX="7.0" layoutY="35.0" mnemonicParsing="false" text="Incident report" />
+                           </children></AnchorPane>
+                    </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+         </children>
+      </AnchorPane>
+   </children>
 </AnchorPane>
-

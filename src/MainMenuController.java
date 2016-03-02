@@ -6,5 +6,5 @@ public class MainMenuController {
 	
 	ImageView image = new ImageView("C:\\Users\\stewart\\Pictures\\AnimalDisposition.jpg");
 	private Button button = new Button("animal diposition");
-
+	
 }

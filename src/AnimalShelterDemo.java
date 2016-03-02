@@ -21,11 +21,14 @@ public class AnimalShelterDemo extends Application {
 	public void start(Stage primaryStage) {
 		try {
 			
-			Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("LoginGUI.fxml"));
+			//Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("LoginGUI.fxml"));
+			//Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("MainMenuGUI.fxml"));
+			  MainMenu mainMenu = new MainMenu();
 			
-		    Scene scene = new Scene(root,400,400);
-			primaryStage.setScene(scene);
-			primaryStage.show();
+		   //Scene scene = new Scene(root,400,400);
+			//primaryStage.setScene(scene);
+			//primaryStage.show();
+			mainMenu.displayMenu();
 		} catch(Exception e) {
 			e.printStackTrace();
 		}

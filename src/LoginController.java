@@ -15,6 +15,7 @@ public class LoginController {
 	
 	@FXML private TextField usernameField;
 	@FXML private PasswordField passwordField;
+		 
 	
 	@FXML
 	public void handleClearButton(ActionEvent event){
@@ -26,8 +27,12 @@ public class LoginController {
 	public void handleLoginButton(ActionEvent event){
 		usernameField.getText();
 		passwordField.getText();
+		
 		System.out.println("You loged in.");
 	}
-	
-	
+	/*
+	public boolean searchDbUsername(){
+		
+	}
+	*/
 }
