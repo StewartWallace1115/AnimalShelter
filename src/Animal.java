@@ -10,24 +10,17 @@
  * 			Class also contains setters and getters for the attributes. 
  */
 public class Animal {
-		private String eyeColor;
-		private String name;
-		private String sex;
-		private String animalIDNumber;
-		private String animalType; 		// Examples are cat, dog, and etc.
-		private String height;
-		private String weight;
-		private String animalBreed;		// Examples are beagle, calico and etc.
-		private String furColor;
+	private String eyeColor;
+	private String name;
+	private String sex;
+	private String animalIDNumber;
+	private String animalType; 		// Examples are cat, dog, and etc.
+	private String height;
+	private String weight;
+	private String animalBreed;		// Examples are beagle, calico and etc.
+	private String furColor;
+	private int    age;
 	
-	public String getFurColor() {
-			return furColor;
-		}
-
-		public void setFurColor(String furColor) {
-			this.furColor = furColor;
-		}
-
 	/*
 	 * The default constructor for Animal class.
 	 */
@@ -75,6 +68,21 @@ public class Animal {
 		this.animalBreed = animalBreed;
 	}
 	
+	public String getFurColor() {
+		return furColor;
+	}
+	
+	public void setFurColor(String furColor) {
+		this.furColor = furColor;
+	}
+	
+	public void setAge(int age){
+		this.age = age;
+	}
+	
+	public int getAge(){
+		return age;
+	}
 	/*
 	 * Returns eye color of the animal as a string.
 	 */

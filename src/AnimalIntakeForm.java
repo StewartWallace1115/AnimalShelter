@@ -1,3 +1,5 @@
+import java.sql.Time;
+import java.util.Calendar;
 
 /*
  * Name: Jordan Powell, Stewart Wallace
@@ -9,39 +11,15 @@
 
 
 public class AnimalIntakeForm {
-
-	private String owner;
-	private String location;
+	private String ACOBadgeNumber;
+	private int intakeNumber;
+	private Calendar date;
+	private Time time;
 	
 	AnimalIntakeForm()
 	{
 	}
 	
-	AnimalIntakeForm(String owner, String location)
-	{
-		this.owner = owner;
-		this.location = location;
-	}
-
-	public String getOwner() 
-	{
-		return owner;
-	}
-
-	public void setOwner(String owner) 
-	{
-		this.owner = owner;
-	}
-
-	public String getLocation() 
-	{
-		return location;
-	}
-
-	public void setLocation(String location) 
-	{
-		this.location = location;
-	}
 	
 	
 }

@@ -8,11 +8,20 @@
  * 			This class contains the animals cage number, and spayed or neurtered.
  */
 public class Pet extends Animal{
-	//CageCard cageCard = null;
+	CageCard cageCard = null;
 	boolean spayedNeutered;
 	boolean microchip;
 	String animalNumber;
+	boolean vaccinationsCurrent;
 	
+	public boolean isVaccinationsCurrent() {
+		return vaccinationsCurrent;
+	}
+
+	public void setVaccinationsCurrent(boolean vaccinationsCurrent) {
+		this.vaccinationsCurrent = vaccinationsCurrent;
+	}
+
 	/*
 	 * Default constructor the class. It sets all attributes to null or false for
 	 * boolean values. 
@@ -20,6 +29,7 @@ public class Pet extends Animal{
 	Pet(){
 		this.spayedNeutered = false;
 		this.animalNumber = null;
+		
 	}
 	
 	/*
@@ -67,9 +77,13 @@ public class Pet extends Animal{
 		this.animalNumber = animalNumber;
 	}
 	
+	public void setMicrochip(boolean microchip){
+		this.microchip = microchip;
+	}
 	public boolean haveMicrochip(){
 		return microchip;
 	}
+	
 	
 	
 }

@@ -1,47 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="431.0" prefWidth="465.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="430.0" prefWidth="474.0" stylesheets="@mainmenu.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainMenuController">
    <children>
-      <AnchorPane prefHeight="200.0" prefWidth="200.0">
-         <children>
-            <TabPane layoutX="44.0" layoutY="44.0" prefHeight="200.0" prefWidth="368.0" tabClosingPolicy="UNAVAILABLE">
-              <tabs>
-                <Tab text="Disposition">
-                  <content>
-                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                           <children>
-                              <Button layoutY="79.0" mnemonicParsing="false" text="Disposition form" />
-                              <Button layoutY="44.0" mnemonicParsing="false" text="Incident form" />
-                              <Button layoutY="15.0" mnemonicParsing="false" text="Display all pets" />
-                           </children></AnchorPane>
-                  </content>
-                </Tab>
-                <Tab text="Reclaimation">
-                  <content>
-                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                           <children>
-                              <Button layoutX="25.0" layoutY="115.0" mnemonicParsing="false" text="Search by " />
-                           </children>
-                        </AnchorPane>
-                  </content>
-                </Tab>
-                  <Tab text="Intake">
-                    <content>
-                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                           <children>
-                              <Button layoutX="7.0" layoutY="73.0" mnemonicParsing="false" text="Intake Form" />
-                              <Button layoutX="7.0" layoutY="35.0" mnemonicParsing="false" text="Incident report" />
-                           </children></AnchorPane>
-                    </content>
-                  </Tab>
-              </tabs>
-            </TabPane>
-         </children>
-      </AnchorPane>
+      <TabPane layoutX="52.0" layoutY="48.0" prefHeight="382.0" prefWidth="395.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="52.0" AnchorPane.rightAnchor="-1.0" AnchorPane.topAnchor="48.0">
+        <tabs>
+          <Tab fx:id="dispostiontab" text=" Animal Disposition ">
+               <content>
+                  <AnchorPane prefHeight="353.0" prefWidth="400.0">
+                     <children>
+                        <Button fx:id="completeDispositionFormButton" layoutX="101.0" layoutY="166.0" mnemonicParsing="false" prefHeight="111.0" prefWidth="116.0" />
+                        <Button fx:id="dipositionFormButton" layoutX="20.0" layoutY="7.0" mnemonicParsing="false" prefHeight="111.0" prefWidth="116.0" />
+                        <Button fx:id="approveDenyAdoptionButton" layoutX="175.0" layoutY="7.0" mnemonicParsing="false" prefHeight="111.0" prefWidth="116.0" />
+                        <Text layoutX="44.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fees form" />
+                        <Text layoutX="187.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Adoption aproval" />
+                        <Text layoutX="113.0" layoutY="298.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Disposition form " />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+          <Tab text=" Animal Intake">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="Intakeform" layoutX="35.0" layoutY="70.0" mnemonicParsing="false"  prefHeight="111.0" prefWidth="116.0"  
+                        onAction="#handleIntakeFormButton"/>
+                     </children>
+                  </AnchorPane>
+               </content></Tab>
+          <Tab text=" Animal Reclaimation" />
+        </tabs>
+      </TabPane>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="Black" height="430.0" stroke="BLACK" strokeType="INSIDE" width="58.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="E5CCFF" height="52.0" layoutX="58.0" stroke="BLACK" strokeType="INSIDE" width="750.0" />
+      <Text layoutX="74.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Animal Shelter Management">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Text>
+      
    </children>
 </AnchorPane>

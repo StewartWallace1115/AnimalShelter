@@ -1,0 +1,27 @@
+.root{
+	-fx-background-color:'CCFFFF';
+}
+
+.tab{
+	
+	-fx-background-color:'6666FF';
+
+}
+.tab:selected .tab-label{
+	-fx-underline: true;
+}
+#approveDenyAdoptionButton{
+	-fx-background-image: url("DispositionFormIcon.png");
+}
+
+#completeDispositionFormButton{
+	-fx-background-image:url("CompleteFormButton.png");
+}
+
+#dipositionFormButton{
+	-fx-background-image:url("FeesFormButton.png");
+}
+
+#Intakeform{
+	-fx-background-image:url("IntakeForm.png");
+}

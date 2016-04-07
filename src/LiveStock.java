@@ -2,16 +2,16 @@
 public class LiveStock extends Animal
 {
 	String liveStockNumber;
-	String vetNumber;
+	int vetNumber;
 	
 	
 	public LiveStock()
 	{
 		this.liveStockNumber = null;
-		this.vetNumber = null;
+		this.vetNumber = 0;
 	}
 	
-	public LiveStock(String liveStockNumber, String vetNumber) 
+	public LiveStock(String liveStockNumber, int vetNumber) 
 	{
 		this.liveStockNumber = liveStockNumber;
 		this.vetNumber = vetNumber;
@@ -36,12 +36,12 @@ public class LiveStock extends Animal
 		this.liveStockNumber = liveStockNumber;
 	}
 	
-	public String getVetNumber() 
+	public int getVetNumber() 
 	{
 		return vetNumber;
 	}
 	
-	public void setVetNumber(String vetNumber) 
+	public void setVetNumber(int vetNumber) 
 	{
 		this.vetNumber = vetNumber;
 	}

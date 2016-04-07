@@ -12,13 +12,24 @@ public class CageCard {
 	Pet pet;
 	Calendar arrivalDate;
 	int cageNumber;
-	Calendar dateAvalibleForAdoption;
-	
+	Calendar dateAvalibleForAdoption ;
+	int petID;
 	CageCard(){
 		pet = new Pet();
+		arrivalDate = Calendar.getInstance();
 		dateAvalibleForAdoption = Calendar.getInstance();
+		dateAvalibleForAdoption.add(Calendar.DATE, 30);
 		
 	}
+	
+	public void setPetID(int petID){
+		this.petID = petID;
+	}
+	
+	public int getPetID(){
+		return petID;
+	}
+	
 	
 	/*
 	 * Returns the pet object.

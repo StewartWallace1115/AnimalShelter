@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="602.0" prefWidth="724.0" stylesheets="@IntakeForm.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="IntakeFormController">
+   <children>
+      <Pane layoutX="-61.0" prefHeight="602.0" prefWidth="724.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane layoutX="14.0" layoutY="32.0" prefHeight="587.0" prefWidth="708.0">
+               <children>
+                  <TextField fx:id="eyeColorField" layoutX="180.0" layoutY="144.0" prefHeight="31.0" prefWidth="125.0" />
+                  <TextField fx:id="nameField" layoutX="180.0" layoutY="100.0" prefHeight="31.0" prefWidth="125.0" />
+                  <TextField fx:id="heightField" layoutX="180.0" layoutY="203.0" prefHeight="31.0" prefWidth="125.0" />
+                  <TextField fx:id="weightField" layoutX="180.0" layoutY="261.0" prefHeight="31.0" prefWidth="125.0" />
+                  <TextField fx:id="furColorField" layoutX="180.0" layoutY="313.0" prefHeight="31.0" prefWidth="125.0" />
+                  
+                  <TextField fx:id="animalTypeField" layoutX="524.0" layoutY="100.0" prefHeight="31.0" prefWidth="125.0" />
+                  <TextField fx:id="animalBreedField" layoutX="524.0" layoutY="155.0" prefHeight="31.0" prefWidth="125.0" />
+                  <TextField fx:id="ageField" layoutX="524.0" layoutY="214.0" prefHeight="31.0" prefWidth="125.0" />
+                  <TextField fx:id="alteredField" layoutX="524.0" layoutY="265.0" prefHeight="31.0" prefWidth="125.0" />
+                  <TextField fx:id="sexField" layoutX="524.0" layoutY="312.0" prefHeight="31.0" prefWidth="125.0" />
+                  
+             	  <Text layoutX="63.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name, if known" />
+                  <Text layoutX="69.0" layoutY="165.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Eye color" />
+                  <Text layoutX="69.0" layoutY="224.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Height" />
+                  <Text layoutX="69.0" layoutY="275.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Weight" />
+                  <Text layoutX="343.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Animal type (cat, dog)" />
+                  <Text layoutX="341.0" layoutY="235.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Age" />
+                  <Text layoutX="341.0" layoutY="181.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Animal breed (calico)" />
+                  <Text layoutX="328.0" layoutY="284.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Is animal altered? (true/false)" />
+                  <Text layoutX="69.0" layoutY="334.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fur color" />
+                 
+                  <Button layoutX="295.0" layoutY="528.0" mnemonicParsing="false" onAction="#handleSumbitButton" text="Submit" />
+                  <RadioButton fx:id="liveStockRadioButton" layoutX="151.0" layoutY="486.0" mnemonicParsing="false" selected="true" text="Live stock">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="animalSelection" />
+                     </toggleGroup></RadioButton>
+                  <RadioButton fx:id="petRadioButton" layoutX="416.0" layoutY="486.0" mnemonicParsing="false" text="Pet" toggleGroup="$animalSelection" />
+                  <Rectangle fx:id="SideRec" arcHeight="5.0" arcWidth="5.0" height="608.0" layoutX="-20.0" layoutY="-35.0" stroke="BLACK" strokeType="INSIDE" width="75.0" />
+                  <Rectangle fx:id="TopRect" arcHeight="5.0" arcWidth="5.0" fill="#e5ccff" height="74.0" layoutX="52.0" layoutY="-37.0" stroke="BLACK" strokeType="INSIDE" width="658.0" />
+                  <Text layoutX="341.0" layoutY="334.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sex (M/F)" />
+                  <TextField fx:id="vaccinationField" layoutX="180.0" layoutY="367.0" prefHeight="31.0" prefWidth="125.0" />
+                  <TextField fx:id="cageCardNumberField" layoutX="520.0" layoutY="377.0" prefHeight="31.0" prefWidth="131.0" />
+                  <Text layoutX="69.0" layoutY="388.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vaccinations?" />
+                  <Text layoutX="341.0" layoutY="398.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cage card(or vet) number" />
+                  <Text layoutX="69.0" layoutY="438.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Microchip (true/false)" />
+                  <TextField fx:id = "microchipField" layoutX="229.0" layoutY="417.0" />
+                  
+                  
+               </children>
+            </AnchorPane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -17,18 +17,17 @@ import javafx.scene.Scene;
 
 
 public class AnimalShelterDemo extends Application {
+	
 	@Override
 	public void start(Stage primaryStage) {
 		try {
+			System.out.println("color is CCFFFF");
+			Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("LoginGUI.fxml"));
 			
-			//Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("LoginGUI.fxml"));
-			//Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("MainMenuGUI.fxml"));
-			  MainMenu mainMenu = new MainMenu();
+			Scene scene = new Scene(root,800,800);
+			primaryStage.setScene(scene);
+			primaryStage.show();
 			
-		   //Scene scene = new Scene(root,400,400);
-			//primaryStage.setScene(scene);
-			//primaryStage.show();
-			mainMenu.displayMenu();
 		} catch(Exception e) {
 			e.printStackTrace();
 		}

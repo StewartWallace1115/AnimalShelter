@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="547.0" prefWidth="582.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+   <children>
+      <Pane layoutX="-100.0" layoutY="-141.0" prefHeight="547.0" prefWidth="582.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane layoutY="-4.0" prefHeight="554.0" prefWidth="582.0">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="554.0" layoutY="-1.0" stroke="BLACK" strokeType="INSIDE" width="79.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="67.0" layoutX="79.0" layoutY="-1.0" stroke="BLACK" strokeType="INSIDE" width="506.0" />
+                  <Text layoutX="91.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Intake #" />
+                  <Text layoutX="261.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date" />
+                  <Text layoutX="91.0" layoutY="180.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Brought in by (ACO badge #) ciitzen's name: " />
+                  <TextField layoutX="91.0" layoutY="195.0" prefHeight="31.0" prefWidth="390.0" />
+                  <Text layoutX="388.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Time" />
+                  <Text layoutX="91.0" layoutY="264.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Weather condition" />
+                  <TextField layoutX="240.0" layoutY="243.0" />
+                  <TextField layoutX="156.0" layoutY="101.0" prefHeight="31.0" prefWidth="100.0" />
+                  <TextField layoutX="300.0" layoutY="100.0" prefHeight="31.0" prefWidth="68.0" />
+                  <TextField layoutX="427.0" layoutY="101.0" prefHeight="31.0" prefWidth="79.0" />
+                  <TextArea layoutX="276.0" layoutY="295.0" prefHeight="132.0" prefWidth="225.0" />
+                  <Text layoutX="91.0" layoutY="316.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bried descirption of situtation  under whtich animal was collect:" wrappingWidth="169.06005859375" />
+                  <Button layoutX="214.0" layoutY="468.0" mnemonicParsing="false" text="Submit" />
+               </children>
+            </AnchorPane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
