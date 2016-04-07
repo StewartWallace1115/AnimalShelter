@@ -21,7 +21,7 @@ public class MainMenuController {
 	void handleDispositionForm(ActionEvent event){
 		Stage disposition = new Stage();
 		try {
-			Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("DispositionFormGUI.fxml"));
+			Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("DispositionSearchGUI.fxml"));
 			Scene scene = new Scene(root,800,800);
 			disposition.setScene(scene);
 			disposition.show();
@@ -37,7 +37,6 @@ public class MainMenuController {
 	void handleIntakeFormButton(ActionEvent event){
 		Stage intake = new Stage();
 		
-		Stage incidentReport = new Stage();
 		try {
 			Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("IntakeFormGUI.fxml"));
 			Scene scene = new Scene(root,740,600);
