@@ -1,9 +1,7 @@
 /*
  * Name:  Stewart Wallace
  * Date:  1/29/2016
- * email: Jordan Powell   - 
- *        Stewart Wallace - swallace3644@g.fmarion.edu
- * 
+ * email: Stewart Wallace - swallace3644@g.fmarion.edu
  * Purpose: This class models a real life pet. This class is a subclass of Animal.
  * 			This class contains the animals cage number, and spayed or neurtered.
  */
@@ -13,6 +11,16 @@ public class Pet extends Animal{
 	boolean microchip;
 	String animalNumber;
 	boolean vaccinationsCurrent;
+	
+	Pet(String eyeColor, String name, String sex,String animalBreed
+			   ,String animalType, String height, String weight, String furColor, int age,
+			   boolean spayedNeutered, boolean microchip, boolean vaccinations){
+		super(eyeColor, name, sex, animalBreed, animalType, height, weight, furColor, age);
+		
+		this.spayedNeutered = spayedNeutered;
+		this.microchip = microchip;
+		this.vaccinationsCurrent = vaccinations;
+	}
 	
 	public boolean isVaccinationsCurrent() {
 		return vaccinationsCurrent;
@@ -41,12 +49,7 @@ public class Pet extends Animal{
 		this.spayedNeutered = spayedNeutered;
 	}
 	
-	Pet(String eyeColor, String name, String sex, String animalType, String height, 
-			String weight, boolean spayedNeutered, String animalBreed){
-		
-		super(eyeColor, name, sex, animalBreed,animalType, height, weight);
-		this.spayedNeutered = spayedNeutered;
-	}
+	
 	
 	/*
 	 * Returns a boolean value if the animal is either spayed or neutered. 

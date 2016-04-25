@@ -1,5 +1,5 @@
 /*
- * Name: Stewart Wallace, Jordan Powell
+ * Name: Stewart Wallace
  * Date: 3/15/2016
  * email: swallace3644@g.fmarion.edu
  * Purpose: This class models the real life cage card. It contains information about the 
@@ -7,19 +7,24 @@
  */
 
 import java.util.Calendar;
+import java.util.Date;
 
 public class CageCard {
 	Pet pet;
-	Calendar arrivalDate;
+	Date arrivalDate;
 	int cageNumber;
-	Calendar dateAvalibleForAdoption ;
+	Date dateAvalibleForAdoption ;
 	int petID;
 	CageCard(){
 		pet = new Pet();
-		arrivalDate = Calendar.getInstance();
-		dateAvalibleForAdoption = Calendar.getInstance();
-		dateAvalibleForAdoption.add(Calendar.DATE, 30);
 		
+	}
+	
+	CageCard(Date arrivalDate, int cageNumber, int petID){
+		this.arrivalDate = arrivalDate;
+		this.cageNumber = cageNumber;
+		this.petID = petID;
+		setDateAvalibleForAdoption(arrivalDate);
 	}
 	
 	public void setPetID(int petID){
@@ -48,14 +53,14 @@ public class CageCard {
 	/*
 	 * Returns a arrivalDate as Calendar data type.
 	 */
-	public Calendar getArrivalDate() {
+	public Date getArrivalDate() {
 		return arrivalDate;
 	}
 	
 	/*
 	 * Sets the arrival data. The parameter is arrivalDatae of Calander type.
 	 */
-	public void setArrivalDate(Calendar arrivalDate) {
+	public void setArrivalDate(Date arrivalDate) {
 		this.arrivalDate = arrivalDate;
 	}
 	
@@ -76,14 +81,21 @@ public class CageCard {
 	/*
 	 * Returns the data avalible for adoption.
 	 */
-	public Calendar getDateAvalibleForAdoption() {
+	public Date getDateAvalibleForAdoption() {
 		return dateAvalibleForAdoption;
 	}
 
 	/*
 	 * Sets the data avalible for adoption. It takes one parameter as Calender data type.
 	 */
-	public void setDateAvalibleForAdoption(Calendar dateAvalibleForAdoption) {
+	public void setDateAvalibleForAdoption(Date dateAvalibleForAdoption) {
+		Calendar cal = Calendar.getInstance();
+		cal.setTime(dateAvalibleForAdoption);
+		
+		cal.add(Calendar.DATE, 30);
+		
+		dateAvalibleForAdoption = cal.getTime();
+		
 		this.dateAvalibleForAdoption = dateAvalibleForAdoption;
 	}
 }

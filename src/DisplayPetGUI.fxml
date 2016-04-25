@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 
+	Name: Stewart Wallace 
+ -->
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="697.0" prefWidth="732.0" stylesheets="@IntakeForm.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PetDisplayController">
+   <children>
+      <Pane prefHeight="697.0" prefWidth="732.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Text layoutX="136.0" layoutY="135.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name:" />
+            <Text fx:id="nameText" layoutX="207.0" layoutY="135.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+            <Text layoutX="338.0" layoutY="136.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sex:" />
+            <Text layoutX="548.0" layoutY="136.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Eye color:" />
+            <Text layoutX="136.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Breed" />
+            <Text layoutX="338.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Type:" />
+            <Text layoutX="548.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+            <Text fx:id="sexText" layoutX="382.0" layoutY="136.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+            <Text fx:id="eyeColorText" layoutX="635.0" layoutY="134.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+            <Text fx:id="breedText" layoutX="207.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+            <Text fx:id="typeText" layoutX="418.0" layoutY="213.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+            <Text layoutX="136.0" layoutY="289.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Height:" />
+            <Text fx:id="heightText" layoutX="207.0" layoutY="290.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+            <Text layoutX="337.0" layoutY="290.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Weight:" />
+            <Text fx:id="weightText" layoutX="428.0" layoutY="291.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+            <Text layoutX="141.0" layoutY="365.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vaccinations?:" />
+            <Text fx:id="vaccinationText" layoutX="273.0" layoutY="366.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+            <Text layoutX="359.0" layoutY="365.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Microchip" />
+            <Text fx:id="microChipText" layoutX="452.0" layoutY="366.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+            <Text layoutX="136.0" layoutY="435.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Altered (spayed/neutered):" />
+            <Text fx:id="alteredText" layoutX="368.0" layoutY="435.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+            <Text layoutX="136.0" layoutY="497.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pet ID #" />
+            <Text fx:id="idNumberText" layoutX="234.0" layoutY="498.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+            <Text layoutX="392.0" layoutY="498.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cage card #" />
+            <Text fx:id="cageCardNUmberText" layoutX="552.0" layoutY="499.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+            <Text layoutX="538.0" layoutY="202.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Age:" />
+            <Text fx:id="ageText" layoutX="607.0" layoutY="204.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+            <Text layoutX="534.0" layoutY="288.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fur color:" />
+            <Text fx:id="furColorText" layoutX="607.0" layoutY="290.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+            <Button fx:id="continueButton" layoutX="273.0" layoutY="569.0" mnemonicParsing="false" onAction="#handleButtonClick" text="Continue" />
+            <Text layoutX="193.0" layoutY="154.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="697.0" stroke="BLACK" strokeType="INSIDE" width="93.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e5ccff" height="74.0" layoutX="93.0" stroke="BLACK" strokeType="INSIDE" width="641.0" />
+            <Text layoutX="207.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Animal Display">
+               <font>
+                  <Font size="50.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

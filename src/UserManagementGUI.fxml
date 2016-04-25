@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 
+	Name: Stewart Wallace  
+ -->
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="585.0" prefWidth="630.0" stylesheets="@UserManagement.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UsersManagerController">
+   <children>
+      <Pane layoutX="-129.0" layoutY="-125.0" prefHeight="585.0" prefWidth="630.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button fx:id="addUserButton" layoutX="154.0" layoutY="242.0" mnemonicParsing="false" onAction="#handleAddUserButtonClick" prefHeight="101.0" prefWidth="130.0" />
+            <Button fx:id="modifyUserButton" layoutX="303.0" layoutY="242.0" mnemonicParsing="false" onAction="#handleModifyUserButtonClick" prefHeight="101.0" prefWidth="119.0" />
+            <Button fx:id="deleteUserButton" layoutX="452.0" layoutY="242.0" mnemonicParsing="false" onAction="#handleDeleteUserButtonClick" prefHeight="101.0" prefWidth="130.0" />
+            <Text layoutX="163.0" layoutY="361.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add User" />
+            <Text layoutX="297.0" layoutY="360.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Modify User" />
+            <Text layoutX="452.0" layoutY="360.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Delete user" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="black" height="591.0" layoutY="-4.0" stroke="BLACK" strokeType="INSIDE" width="75.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="E5CCFF" height="78.0" layoutX="74.0" stroke="BLACK" strokeType="INSIDE" width="556.0" />
+            <Text layoutX="185.0" layoutY="165.0" strokeType="OUTSIDE" strokeWidth="0.0" text="What would you like to do?:" />
+            <Text layoutX="88.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Management">
+               <font>
+                  <Font size="65.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

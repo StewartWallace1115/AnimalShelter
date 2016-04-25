@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="926.0" prefWidth="941.0" xmlns="http://javafx.com/javafx/8"  stylesheets="@RootBackGround.css" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FeesChargedController">
+   <children>
+      <Pane layoutX="-113.0" layoutY="-124.0" prefHeight="878.0" prefWidth="941.0" AnchorPane.bottomAnchor="-112.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Text layoutX="315.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Indian Lake Shelter Reciept" />
+            <Text layoutX="189.0" layoutY="172.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Owner recovery fees:" />
+            <Text layoutX="189.0" layoutY="204.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dog or cat: $25 ....................................................... ________" />
+            <Text layoutX="189.0" layoutY="241.0" strokeType="OUTSIDE" strokeWidth="0.0" text="No rabies proof: $10 ............................................._________" />
+            <Text layoutX="189.0" layoutY="276.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Unaltered: $10 ......................................................_____________" />
+            <Text layoutX="404.0" layoutY="328.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total:" />
+            <Text layoutX="457.0" layoutY="328.0" strokeType="OUTSIDE" strokeWidth="0.0" text="_______________" />
+            <Text layoutX="142.0" layoutY="366.0" strokeType="OUTSIDE" strokeWidth="0.0" text="_______________________________________________________________________________________________________________________________" />
+            <Text layoutX="189.0" layoutY="409.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Adoption fee:" />
+            <Text layoutX="189.0" layoutY="439.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dog or cat: $85 per  ________ animal(s) recieved  " />
+            <Text layoutX="390.0" layoutY="497.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total  _________" />
+            <Text layoutX="142.0" layoutY="533.0" strokeType="OUTSIDE" strokeWidth="0.0" text="_______________________________________________________________________________________________________________________________" />
+            <Text layoutX="189.0" layoutY="563.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Livestock fee:" />
+            <Text layoutX="189.0" layoutY="608.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$15 times _______ days times ________ animals = $ ___________  " />
+            <Text layoutX="189.0" layoutY="648.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Transport fees (if any) …………………... _____" />
+            <Text layoutX="390.0" layoutY="679.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total ______" />
+            <Text layoutX="142.0" layoutY="690.0" strokeType="OUTSIDE" strokeWidth="0.0" text="_______________________________________________________________________________________________________________________________" />
+            <Text layoutX="175.0" layoutY="795.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name _____________" />
+            <Text layoutX="376.0" layoutY="795.0" strokeType="OUTSIDE" strokeWidth="0.0" text="City _____________" />
+            <Text layoutX="375.0" layoutY="826.0" strokeType="OUTSIDE" strokeWidth="0.0" text="State ___" />
+            <Text layoutX="175.0" layoutY="731.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total fees of $______________ received for" />
+            <Text layoutX="175.0" layoutY="826.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Address _____________" />
+            <Text layoutX="464.0" layoutY="826.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Zip _______" />
+            <Text layoutX="576.0" layoutY="795.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone _____________" />
+            <Text layoutX="576.0" layoutY="826.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email address _____________" />
+            <Button fx:id="printButton" layoutX="372.0" layoutY="855.0" mnemonicParsing="false" text="Print" />
+            <Text fx:id="ownerDogOrCatText" layoutX="490.0" layoutY="193.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+            <Text fx:id="ownerRabiesText" layoutX="480.0" layoutY="231.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+            <Text fx:id="unalteredText" layoutX="480.0" layoutY="266.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+            <Text fx:id="ownerTotal" layoutX="473.0" layoutY="318.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+            <Text fx:id="amountPetText" layoutX="333.0" layoutY="429.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+            <Text fx:id="adoptionTotalText" layoutX="443.0" layoutY="487.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+            <Text fx:id="liveStockDaysText" layoutX="265.0" layoutY="598.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+            <Text fx:id="liveStockAmountText" layoutX="390.0" layoutY="597.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+            <Text fx:id="liveStockSubTotalText" layoutX="532.0" layoutY="596.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+            <Text fx:id="transportFeesText" layoutX="425.0" layoutY="638.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+            <Text fx:id="liveStockTotalText" layoutX="429.0" layoutY="669.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+            <Text fx:id="feesTotalText" layoutX="293.0" layoutY="730.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+            <Text fx:id="petLiveStockText" layoutX="457.0" layoutY="730.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+            <Text fx:id="nameText" layoutX="230.0" layoutY="785.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+            <Text fx:id="cityText" layoutX="413.0" layoutY="785.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+            <Text fx:id="phoneText" layoutX="640.0" layoutY="785.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+            <Text fx:id="addressText" layoutX="230.0" layoutY="816.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+            <Text fx:id="stateText" layoutX="413.0" layoutY="816.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+            <Text fx:id="zipText" layoutX="492.0" layoutY="816.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+            <Text fx:id="emailText" layoutX="675.0" layoutY="816.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="933.0" layoutY="-4.0" stroke="BLACK" strokeType="INSIDE" width="110.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e5ccff" height="76.0" layoutX="110.0" stroke="BLACK" strokeType="INSIDE" width="835.0" />
+            <Text layoutX="273.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fees Reciept">
+               <font>
+                  <Font size="54.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -1,8 +1,7 @@
 /*
- * Name:  Jordan Powell, Stewart Wallace
+ * Name:  Stewart Wallace
  * Date:  1/29/2016
- * email: Jordan Powell   - 
- *        Stewart Wallace - swallace3644@g.fmarion.edu
+ * email:  Stewart Wallace - swallace3644@g.fmarion.edu
  * 
  * Purpose: The purpose of this class is to be a generalization for both pet and
  * 			livestock. This class stores eye color, name, sex, animal ID number, 
@@ -13,10 +12,13 @@ public class Animal {
 	private String eyeColor;
 	private String name;
 	private String sex;
+	private String animalType; // Examples are cat, dog, and etc.
+	
 	private String animalIDNumber;
-	private String animalType; 		// Examples are cat, dog, and etc.
+			
 	private String height;
 	private String weight;
+	
 	private String animalBreed;		// Examples are beagle, calico and etc.
 	private String furColor;
 	private int    age;
@@ -40,7 +42,7 @@ public class Animal {
 	 * weight, and height. animalIDNumber is set to null.
 	 */
 	Animal(String eyeColor, String name, String sex,String animalBreed
-		   ,String animalType, String height, String weight){
+		   ,String animalType, String height, String weight, String furColor, int age){
 		this.eyeColor = eyeColor;
 		this.name = name;
 		this.sex = sex;
@@ -49,8 +51,11 @@ public class Animal {
 		this.height = height;
 		this.animalBreed = animalBreed;
 		this.animalIDNumber = null;
+		this.furColor = furColor;
+		this.age =age;
 	
 	}
+	
 	/*
 	 * Constructor that accepts all of the attributes parameters for the class.
 	 * The parameters are all string and they're eyeColor, name, sex, animalIDNumber,
@@ -68,21 +73,34 @@ public class Animal {
 		this.animalBreed = animalBreed;
 	}
 	
+	/*
+	 * Returns the furColor as a String type.
+	 */
 	public String getFurColor() {
 		return furColor;
 	}
 	
+	/*
+	 * Sets the object's furColor and accepts a String type called furColor
+	 */
 	public void setFurColor(String furColor) {
 		this.furColor = furColor;
 	}
 	
+	/*
+	 * Accepts an integer called age.
+	 */
 	public void setAge(int age){
 		this.age = age;
 	}
 	
+	/*
+	 * Returns the age as an integer.
+	 */
 	public int getAge(){
 		return age;
 	}
+	
 	/*
 	 * Returns eye color of the animal as a string.
 	 */
@@ -188,6 +206,7 @@ public class Animal {
 	public String getAnimalBreed(){
 		return animalBreed;
 	}
+	
 	/*
 	 * Sets animal's breed. Accepts a string called breed.
 	 */

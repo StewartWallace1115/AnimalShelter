@@ -1,9 +1,8 @@
 /*
  * Name: Stewart Wallace
+ * Purpose: Creates background for all GUIs.
  */
 
 .root{
 	-fx-background-color:'CCFFFF';
 }
-
-

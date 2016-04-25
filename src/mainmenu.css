@@ -1,3 +1,7 @@
+/*
+ * Name: Stewart Wallace 
+ */
+
 .root{
 	-fx-background-color:'CCFFFF';
 }
@@ -10,18 +14,18 @@
 .tab:selected .tab-label{
 	-fx-underline: true;
 }
-#approveDenyAdoptionButton{
-	-fx-background-image: url("DispositionFormIcon.png");
+#reclaimationButton{
+	-fx-background-image: url("Reclaimation.png");
 }
 
-#completeDispositionFormButton{
-	-fx-background-image:url("CompleteFormButton.png");
+#userButton{
+	-fx-background-image:url("user.png");
 }
 
-#dipositionFormButton{
-	-fx-background-image:url("FeesFormButton.png");
+#dipositionButton{
+	-fx-background-image:url("DispositionFormIcon.png");
 }
 
-#Intakeform{
+#intakeButton{
 	-fx-background-image:url("IntakeForm.png");
 }

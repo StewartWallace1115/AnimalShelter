@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<!--
+	Name:Stewart Wallace 
+	Date: 3/21/2016
+	Purpose: This FXML creates the intake owner form GUI for the program.
+ -->
+
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.text.*?>
@@ -7,7 +13,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="524.0" prefWidth="658.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" stylesheets="@IntakeOwnerForm.css" fx:controller="OwnerController">
+<AnchorPane prefHeight="524.0" prefWidth="658.0" stylesheets="@IntakeOwnerForm.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="OwnerController">
    <children>
       <Pane layoutX="-87.0" layoutY="-100.0" prefHeight="524.0" prefWidth="658.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -20,16 +26,21 @@
                   <Text layoutX="347.0" layoutY="221.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Zip Code" />
                   <Text layoutX="79.0" layoutY="270.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone Number" />
                   <Text layoutX="78.0" layoutY="313.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email" />
-                  <TextField fx:id = "nameField" layoutX="137.0" layoutY="100.0" prefHeight="31.0" prefWidth="402.0" />
-                  <TextField fx:id = "addressField" layoutX="137.0" layoutY="146.0" />
-                  <TextField fx:id = "cityField" layoutX="431.0" layoutY="146.0" />
-                  <TextField fx:id = "stateField" layoutX="137.0" layoutY="200.0" />
-                  <TextField fx:id = "zipCodeField" layoutX="431.0" layoutY="200.0" />
-                  <TextField fx:id = "phoneNumberField" layoutX="195.0" layoutY="248.0" />
-                  <TextField fx:id = "emailAddressField" layoutX="140.0" layoutY="292.0" prefHeight="31.0" prefWidth="366.0" />
-                  <Button onAction="#handleSubmitButton" layoutX="291.0" layoutY="394.0" mnemonicParsing="false" text="submit" />
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="74.0" layoutX="65.0" stroke="BLACK" strokeType="INSIDE" width="593.0" />
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="524.0" stroke="BLACK" strokeType="INSIDE" width="66.0" />
+                  <TextField fx:id="nameField" layoutX="137.0" layoutY="100.0" prefHeight="31.0" prefWidth="402.0" />
+                  <TextField fx:id="addressField" layoutX="137.0" layoutY="146.0" />
+                  <TextField fx:id="cityField" layoutX="431.0" layoutY="146.0" />
+                  <TextField fx:id="stateField" layoutX="137.0" layoutY="200.0" />
+                  <TextField fx:id="zipCodeField" layoutX="431.0" layoutY="200.0" />
+                  <TextField fx:id="phoneNumberField" layoutX="195.0" layoutY="248.0" />
+                  <TextField fx:id="emailAddressField" layoutX="140.0" layoutY="292.0" prefHeight="31.0" prefWidth="366.0" />
+                  <Button layoutX="291.0" layoutY="394.0" mnemonicParsing="false" onAction="#handleSubmitButton" text="submit" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="E5CCFF" height="74.0" layoutX="65.0" stroke="BLACK" strokeType="INSIDE" width="650.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="Black" height="600.0" stroke="BLACK" strokeType="INSIDE" width="66.0" />
+                  <Text layoutX="146.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Intake Owner Form">
+                     <font>
+                        <Font size="50.0" />
+                     </font>
+                  </Text>
                </children>
             </AnchorPane>
          </children>

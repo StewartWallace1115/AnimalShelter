@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ 
+<!-- 
+	Name: Stewart Wallace 
+	Date:
+	Purpose: The purpose of this class is to create the reclaimation form GUI for the program.
+ -->
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="696.0" prefWidth="876.0" stylesheets="@RootBackGround.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ReclaimationFormController">
+   <children>
+      <Pane layoutX="8.0" prefHeight="589.0" prefWidth="615.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="-8.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Text layoutX="222.0" layoutY="137.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" />
+            <TextField fx:id="nameField" layoutX="288.0" layoutY="116.0" />
+            <Text layoutX="222.0" layoutY="207.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date brought in" />
+            <TextField layoutX="339.0" layoutY="186.0" prefHeight="31.0" prefWidth="135.0" />
+            <Text layoutX="224.0" layoutY="272.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID number" />
+            <TextField fx:id="idField" layoutX="323.0" layoutY="251.0" prefHeight="31.0" prefWidth="151.0" />
+            <Text layoutX="216.0" layoutY="331.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cage card" />
+            <Text layoutX="224.0" layoutY="348.0" strokeType="OUTSIDE" strokeWidth="0.0" text="number" />
+            <TextField layoutX="312.0" layoutY="315.0" prefHeight="31.0" prefWidth="161.0" />
+            <Button layoutX="349.0" layoutY="523.0" mnemonicParsing="false" onAction="#handleSumbitButton" text="Submit" />
+            <Text layoutX="228.0" layoutY="390.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vet ID" />
+            <TextField layoutX="299.0" layoutY="369.0" />
+            <RadioButton fx:id="petRadioButton" layoutX="220.0" layoutY="450.0" mnemonicParsing="false" selected="true" text="Pet">
+               <toggleGroup>
+                  <ToggleGroup fx:id="animalGroup" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="liveStockRadioButton" layoutX="387.0" layoutY="450.0" mnemonicParsing="false" text="Live stock" toggleGroup="$animalGroup" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="696.0" layoutX="-9.0" stroke="BLACK" strokeType="INSIDE" width="105.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e5ccff" height="82.0" layoutX="96.0" stroke="BLACK" strokeType="INSIDE" width="773.0" />
+            <Text layoutX="228.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Reclaimation search" wrappingWidth="536.453125">
+               <font>
+                  <Font size="55.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

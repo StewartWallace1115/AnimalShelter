@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+	Name: Stewart Wallace 
+ -->
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="635.0" prefWidth="770.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" stylesheets="@RootBackGround.css" fx:controller="CountyRegistrationController">
+   <children>
+      <Pane prefHeight="514.0" prefWidth="518.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <RadioButton fx:id="dogRadio" layoutX="208.0" layoutY="389.0" mnemonicParsing="false" text="dog">
+               <toggleGroup>
+                  <ToggleGroup fx:id="Pet" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="catRadio" layoutX="364.0" layoutY="389.0" mnemonicParsing="false" text="Cat" toggleGroup="$Pet" />
+            <Text layoutX="194.0" layoutY="159.0" strokeType="OUTSIDE" strokeWidth="0.0" text="VetID" />
+            <Text layoutX="89.0" layoutY="179.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+            <Text layoutX="194.0" layoutY="206.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vaccinations" />
+            <Text layoutX="194.0" layoutY="249.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vaccinations date:" />
+            <TextField fx:id="vetIDText" layoutX="338.0" layoutY="140.0" />
+            <TextField fx:id="vaccinationsText" layoutX="338.0" layoutY="187.0" />
+            <TextField fx:id="vaccinationsDateText" layoutX="338.0" layoutY="229.0" />
+            <Button fx:id="submitButton" layoutX="263.0" layoutY="446.0" mnemonicParsing="false" onAction="#handleSumbitButton" text="Submit" />
+            <Text layoutX="89.0" layoutY="284.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+            <Text layoutX="189.0" layoutY="300.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Certified to assist the disabled (dogs only)" />
+            <Text layoutX="89.0" layoutY="325.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+            <TextField fx:id="certifiedText" layoutX="189.0" layoutY="320.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="635.0" stroke="BLACK" strokeType="INSIDE" width="91.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e5ccff" height="87.0" layoutX="89.0" stroke="BLACK" strokeType="INSIDE" width="682.0" />
+            <Text layoutX="199.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="County Registration">
+               <font>
+                  <Font size="51.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

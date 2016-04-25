@@ -1,3 +1,6 @@
+/*
+ * Name:Jordan Powell
+ */
 
 public class LiveStock extends Animal
 {
@@ -17,11 +20,16 @@ public class LiveStock extends Animal
 		this.vetNumber = vetNumber;
 	}
 	
+	public LiveStock(String name, String eyeColor, String sex, String  animalType,
+			String animalBreed, String height, String weight, int age, String furColor){
+		super(eyeColor, name, sex, animalBreed, animalType, height, weight, furColor, age);
+	}
 	
-	public LiveStock(String eyeColor, String name, String sex, String animalIDNumber,
-					 String animalType, String height,String weight) 
+	
+	public LiveStock(String eyeColor, String name, String sex,String animalBreed
+			   ,String animalType, String height, String weight, String furColor, int age) 
 	{
-		super(eyeColor, name, sex, animalIDNumber, animalType, height, weight);
+		super(eyeColor, name, sex, animalBreed, animalType, height, weight, furColor, age);
 	}
 
 

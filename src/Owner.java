@@ -1,4 +1,9 @@
-
+/*
+ * Name: Stewart Wallace
+ * Date: 3/28/2016
+ * email: swallace3644@g.fmarion.edu
+ * Purpose: This class models the 
+ */
 
 public class Owner {
 	private String 	 name;
@@ -8,6 +13,21 @@ public class Owner {
 	private String   city;
 	private String   state;
 	private String   email;
+	
+	Owner(String name, String address, int zip, String phoneNumber, String city,
+			String state, String email){
+		this.name = name;
+		this.address = address;
+		this.zip = zip;
+		this.phoneNumber = phoneNumber;
+		this.city = city;
+		this.state = state; 
+		this.email = email;
+	}
+	
+	Owner(){
+		
+	}
 	
 	public String getName() {
 		return name;

@@ -1,21 +1,21 @@
 /*
- * Name:  Jordan Powell, Stewart Wallace
+ * Name:  Jordan Powell
  * Date:  2/25/2016
  * email: Jordan Powell   - jpowell3617@g.fmarion.edu
- *        Stewart Wallace - swallace3644@g.fmarion.edu
  * 
  * Purpose: The purpose of this class is to create and store information for 
  * 			all transactions in the animal shelter and serve as a receipt. 
  */
 
 public class FeesChargedForm {
-	int total = 0;
+	int total = 0, animalID;
 	boolean dogOrCat, noRabies, unaltered;
 	int numberOfAnimals;
 	boolean adoptionFee, liveStockRecoveryFee;
 	int days, transportFee;
-
+	String reason;
 	String name, date, address, city, state, zip, phoneNumber, email;
+	
 
 	public int calculateRecoveryFee() 
 	{
@@ -64,6 +64,11 @@ public class FeesChargedForm {
 		this.zip = zip;
 		this.phoneNumber = phoneNumber;
 		this.email = email;
+	}
+	
+	public FeesChargedForm()
+	{
+		
 	}
 
 	public int getTotal() {

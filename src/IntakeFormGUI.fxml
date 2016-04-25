@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<!-- 
+	Name: Stewart Wallace 
+ -->
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
@@ -42,14 +45,19 @@
                      </toggleGroup></RadioButton>
                   <RadioButton fx:id="petRadioButton" layoutX="416.0" layoutY="486.0" mnemonicParsing="false" text="Pet" toggleGroup="$animalSelection" />
                   <Rectangle fx:id="SideRec" arcHeight="5.0" arcWidth="5.0" height="608.0" layoutX="-20.0" layoutY="-35.0" stroke="BLACK" strokeType="INSIDE" width="75.0" />
-                  <Rectangle fx:id="TopRect" arcHeight="5.0" arcWidth="5.0" fill="#e5ccff" height="74.0" layoutX="52.0" layoutY="-37.0" stroke="BLACK" strokeType="INSIDE" width="658.0" />
+                  <Rectangle fx:id="TopRect" arcHeight="5.0" arcWidth="5.0" fill="#e5ccff" height="74.0" layoutX="52.0" layoutY="-37.0" stroke="BLACK" strokeType="INSIDE" width="700.0" />
                   <Text layoutX="341.0" layoutY="334.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sex (M/F)" />
                   <TextField fx:id="vaccinationField" layoutX="180.0" layoutY="367.0" prefHeight="31.0" prefWidth="125.0" />
                   <TextField fx:id="cageCardNumberField" layoutX="520.0" layoutY="377.0" prefHeight="31.0" prefWidth="131.0" />
                   <Text layoutX="69.0" layoutY="388.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vaccinations?" />
                   <Text layoutX="341.0" layoutY="398.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cage card(or vet) number" />
                   <Text layoutX="69.0" layoutY="438.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Microchip (true/false)" />
-                  <TextField fx:id = "microchipField" layoutX="229.0" layoutY="417.0" />
+                  <TextField fx:id="microchipField" layoutX="229.0" layoutY="417.0" />
+                  <Text layoutX="120.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Animal Intake Form">
+                     <font>
+                        <Font size="67.0" />
+                     </font>
+                  </Text>
                   
                   
                </children>

@@ -1,7 +1,7 @@
 /*
- * Name: Jordan Powell, Stewart Wallace
+ * Name: Stewart Wallace
  * Date: 2/20/2016
- * Email
+ * Email: swallace3644@g.fmarion.edu
  * Purpose: The purpose of this class is to controller the events that are produced by 
  * the LoginGUI.fxml. This class can either login in the user or clear the text fields.
  */

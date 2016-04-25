@@ -1,8 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane xmlns:fx="http://javafx.com/fxml/1">
-	<!-- TODO Add Nodes -->
+<AnchorPane prefHeight="666.0" prefWidth="818.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" stylesheets="@RootBackGround.css"  fx:controller="DispositionFormController">
+   <children>
+      <Pane layoutX="-100.0" layoutY="-112.0" prefHeight="520.0" prefWidth="565.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Text layoutX="203.0" layoutY="313.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contact information for receipt of animal for above reason: " />
+            <Text layoutX="189.0" layoutY="364.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" />
+            <TextField fx:id="nameField" layoutX="238.0" layoutY="343.0" />
+            <Text layoutX="30.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+            <Text layoutX="486.0" layoutY="363.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date" />
+            <Text layoutX="182.0" layoutY="478.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Address" />
+            <Text layoutX="190.0" layoutY="414.0" strokeType="OUTSIDE" strokeWidth="0.0" text="City" />
+            <Text layoutX="468.0" layoutY="414.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Zip code" />
+            <Text layoutX="451.0" layoutY="475.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone number" />
+            <Text layoutX="156.0" layoutY="528.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email Address" />
+            <TextField fx:id="zipField" layoutX="548.0" layoutY="394.0" />
+            <TextField fx:id="dateField" layoutX="549.0" layoutY="343.0" />
+            <TextField fx:id="cityField" layoutX="238.0" layoutY="395.0" />
+            <TextField fx:id="addressField" layoutX="241.0" layoutY="457.0" />
+            <TextField fx:id="emailAddressField" layoutX="249.0" layoutY="507.0" />
+            <TextField fx:id="phoneNumberField" layoutX="549.0" layoutY="454.0" />
+            <RadioButton fx:id="reclaimRadio" layoutX="202.0" layoutY="201.0" mnemonicParsing="false" text="Reclaimed by owner (within 30 days of adoption)days ">
+               <toggleGroup>
+                  <ToggleGroup fx:id="ExitReason" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="auctionRadio" layoutX="203.0" layoutY="229.0" mnemonicParsing="false" text="Auction (give auction location below)" toggleGroup="$ExitReason" />
+            <RadioButton fx:id="euthanizedRadio" layoutX="203.0" layoutY="259.0" mnemonicParsing="false" text="Euthanized (give vet below)" toggleGroup="$ExitReason" />
+            <RadioButton fx:id="adoptedRadio" layoutX="202.0" layoutY="171.0" mnemonicParsing="false" selected="true" text="Adopted (give owner information below)" toggleGroup="$ExitReason" />
+            <Text layoutX="208.0" layoutY="157.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Exit reason" />
+            <Button layoutX="336.0" layoutY="592.0" mnemonicParsing="false" onAction="#handleSumbitButton" text="Submit" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="666.0" stroke="BLACK" strokeType="INSIDE" width="117.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e5ccff" height="84.0" layoutX="115.0" stroke="BLACK" strokeType="INSIDE" width="707.0" />
+            <Text layoutX="251.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Disposition Form">
+               <font>
+                  <Font size="49.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+   </children>
 </AnchorPane>
-

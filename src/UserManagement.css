@@ -1,0 +1,18 @@
+/*
+ * Name: Stewart Wallace
+ */
+
+.root{
+	-fx-background-color:'CCFFFF';
+}
+#addUserButton{
+	-fx-background-image:url("addUser.png");
+}
+
+#modifyUserButton{
+	-fx-background-image:url("modifyUser.png");
+}
+
+#deleteUserButton{
+	-fx-background-image:url("deleteUser.png");
+}

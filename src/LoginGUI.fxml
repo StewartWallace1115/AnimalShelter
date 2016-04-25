@@ -1,28 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<!-- 
+	Name: Stewart Wallace
+	Date: 2/24/2016
+	Purpose: The purpose of this class is to create the login scree.
+ -->
+
+<?import javafx.scene.text.*?>
 <?import javafx.scene.shape.*?>
 <?import java.lang.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LoginController">
+<AnchorPane stylesheets="@RootBackGround.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LoginController">
    <children>
       <Accordion />
-      <Pane layoutY="-2.0" prefHeight="372.0" prefWidth="450.0">
+      <Pane layoutY="-2.0" prefHeight="448.0" prefWidth="804.0">
          <children>
-            <Button layoutX="173.0" layoutY="194.0" mnemonicParsing="false" onAction="#handleLoginButton" prefHeight="31.0" prefWidth="70.0" text="Login" />
-            <Button layoutX="291.0" layoutY="194.0" mnemonicParsing="false" onAction="#handleClearButton" prefHeight="31.0" prefWidth="91.0" text="Clear" />
-            <TextField fx:id="usernameField" layoutX="173.0" layoutY="62.0" prefHeight="31.0" prefWidth="270.0" />
-            <Label layoutX="92.0" layoutY="66.0" text="Username:" />
-            <Label layoutX="94.0" layoutY="117.0" text="Password:" />
-            <PasswordField fx:id="passwordField" layoutX="173.0" layoutY="113.0" prefHeight="31.0" prefWidth="270.0" />
-            <CheckBox layoutX="304.0" layoutY="159.0" mnemonicParsing="false" text="Show password" />
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="33.0" layoutX="45.0" stroke="BLACK" strokeType="INSIDE" width="750.0" />
+            <Button layoutX="235.0" layoutY="293.0" mnemonicParsing="false" onAction="#handleLoginButton" prefHeight="31.0" prefWidth="70.0" text="Login" />
+            <Button layoutX="353.0" layoutY="293.0" mnemonicParsing="false" onAction="#handleClearButton" prefHeight="31.0" prefWidth="91.0" text="Clear" />
+            <TextField fx:id="usernameField" layoutX="235.0" layoutY="161.0" prefHeight="31.0" prefWidth="270.0" />
+            <Label layoutX="154.0" layoutY="165.0" text="Username:" />
+            <Label layoutX="156.0" layoutY="216.0" text="Password:" />
+            <PasswordField fx:id="passwordField" layoutX="235.0" layoutY="212.0" prefHeight="31.0" prefWidth="270.0" />
+            <CheckBox layoutX="366.0" layoutY="258.0" mnemonicParsing="false" text="Show password" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="E5CCFF" height="77.0" layoutX="87.0" stroke="BLACK" strokeType="INSIDE" width="721.0" />
             <Label fx:id="loginLabel" layoutX="173.0" layoutY="250.0" prefHeight="21.0" prefWidth="450.0" />
+            <Text layoutX="197.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Indian Lake Animal Shelter">
+               <font>
+                  <Font size="46.0" />
+               </font>
+            </Text>
          </children>
       </Pane>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" height="775.0" stroke="BLACK" strokeType="INSIDE" width="45.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="800.0" stroke="BLACK" strokeType="INSIDE" width="91.0" />
    </children>
  
 </AnchorPane>

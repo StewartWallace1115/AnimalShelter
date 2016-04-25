@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="632.0" prefWidth="948.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" stylesheets="@RootBackGround.css" fx:controller="ModifyUserController">
+   <children>
+      <Pane layoutX="-100.0" layoutY="-120.0" prefHeight="632.0" prefWidth="948.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Text layoutX="256.0" layoutY="147.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Old Username:" />
+            <Text layoutX="256.0" layoutY="192.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Old password" />
+            <Text layoutX="253.0" layoutY="291.0" strokeType="OUTSIDE" strokeWidth="0.0" text="New Username:" />
+            <Text layoutX="256.0" layoutY="340.0" strokeType="OUTSIDE" strokeWidth="0.0" text="New password" />
+            <Text layoutX="256.0" layoutY="390.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Re-enter new password" />
+            <TextField fx:id="oldUsernameText" layoutX="452.0" layoutY="126.0" />
+            <TextField fx:id="oldPasswordText" layoutX="452.0" layoutY="171.0" />
+            <Text layoutX="256.0" layoutY="249.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Warning: if old username and old password is the same re-enter it." />
+            <TextField fx:id="newUsernameText" layoutX="452.0" layoutY="270.0" />
+            <TextField fx:id="newPasswordText" layoutX="452.0" layoutY="323.0" />
+            <TextField fx:id="reenterNewPasswordText" layoutX="452.0" layoutY="369.0" />
+            <Button fx:id="modifyButton" layoutX="387.0" layoutY="424.0" mnemonicParsing="false" onAction="#handleModifyButtonClick" text="Modify" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="632.0" stroke="BLACK" strokeType="INSIDE" width="104.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="82.0" layoutX="104.0" stroke="BLACK" strokeType="INSIDE" width="847.0" />
+            <Text layoutX="220.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Modify User">
+               <font>
+                  <Font size="55.0" />
+               </font>
+            </Text>
+         </children></Pane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+	Name: Stewart Wallace 
+ -->
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="548.0" prefWidth="633.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" stylesheets="@RootBackGround.css" fx:controller="AddUserController">
+   <children>
+      <Pane layoutX="95.0" layoutY="55.0" prefHeight="377.0" prefWidth="476.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Text layoutX="123.0" layoutY="236.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username" />
+            <Text layoutX="123.0" layoutY="286.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password" />
+            <Text layoutX="123.0" layoutY="335.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Re-enter pasword:" />
+            <TextField fx:id="usernameText" layoutX="263.0" layoutY="216.0" />
+            <TextField fx:id="passwordText" layoutX="263.0" layoutY="266.0" />
+            <TextField fx:id="reenterPasswordText" layoutX="263.0" layoutY="315.0" />
+            <Text layoutX="140.0" layoutY="179.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please enter the new user's:" />
+            <Button layoutX="257.0" layoutY="403.0" mnemonicParsing="false" onAction="#handleAddButtonClick" text="Add" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="548.0" stroke="BLACK" strokeType="INSIDE" width="104.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="90.0" layoutX="104.0" stroke="BLACK" strokeType="INSIDE" width="531.0" />
+            <Text layoutX="218.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add User">
+               <font>
+                  <Font size="60.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

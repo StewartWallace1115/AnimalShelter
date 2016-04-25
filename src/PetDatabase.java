@@ -2,14 +2,13 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 
 /*
  * Name: Stewart Wallace
  * Date: 2/17/2016
  * email: swallace3644@g.fmarion.edu
  * 
- * Purpose: Boundary class to interact with the database for the animal class.
+ * Purpose: Boundary class to interact with the database for the pet class.
  */
 public class PetDatabase {
 	Database database = new Database();
@@ -20,13 +19,17 @@ public class PetDatabase {
 		this.pet = pet;
 		this.cageCard = cageCard;
 	}
+	
+	PetDatabase(){
+		
+	}
 	public void insert(){
 		String query = "INSERT INTO pet(name, eyeColor, sex, type, breed, height, weight, "
 				+ "age, furColor, cageCardNumber, altered, microchip, vaccinations)"
 				+ "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 		
 		try {
-			PreparedStatement prepareStatement = conn.prepareStatement(query,Statement.RETURN_GENERATED_KEYS);
+			PreparedStatement prepareStatement = conn.prepareStatement(query);
 			
 			prepareStatement.setString(1, pet.getName());
 			prepareStatement.setString(2, pet.getEyeColor());
@@ -45,17 +48,6 @@ public class PetDatabase {
 			
 			prepareStatement.execute();
 			 
-			ResultSet rset = prepareStatement.getGeneratedKeys();
-			 int i = 0;
-	           while (rset.next()) {
-
-	           i = rset.getInt(1);
-
-	           System.out.println("key=" + i);
-
-	            }
-	           cageCard.setPetID(i);
-			
 			
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -63,5 +55,58 @@ public class PetDatabase {
 		}
 		
 		
+	}
+	
+	public Pet searchID(int petID){
+		String query = "Select * from pet where id = ?";
+		try {
+			PreparedStatement ps = conn.prepareStatement(query);
+			ps.setInt(1, petID);
+			
+			ResultSet rs = ps.executeQuery();
+			
+			while(rs.next()){
+				String name = rs.getString("name");
+				String eyeColor = rs.getString("eyecolor");
+				String sex = rs.getString("sex");
+				String type = rs.getString("type");
+				String breed = rs.getString("breed");
+				String height = rs.getString("height");
+				String weight = rs.getString("weight");
+				int age = rs.getInt("age");
+				String furColor = rs.getString("furColor");
+				boolean altered = rs.getBoolean("altered");
+				boolean vaccinations = rs.getBoolean("vaccinations");
+				boolean microchip = rs.getBoolean("microchip");
+				
+				pet = new Pet(eyeColor, name, sex, breed, type, height, weight, furColor,
+						age, altered, microchip, vaccinations);
+				
+				return pet;
+						
+			}
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+		
+		return pet;
+	}
+	
+	public void deletePet(int petID){
+		String query = "Delete from users where username = ?";
+		
+		try {
+			PreparedStatement ps = conn.prepareStatement(query);
+			
+			ps.setInt(1, petID);
+			ps.executeQuery();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 }
