@@ -6,12 +6,18 @@
  * data into the table, gets the last petID and returns cagecard number.
  */
 
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 
 public class CageCardDatabase {
 	Database database = new Database();
@@ -51,8 +57,19 @@ public class CageCardDatabase {
 			
 			ps.execute();
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			Parent rootMain;
+			
+			try {
+				
+				rootMain = FXMLLoader.load(getClass().getClassLoader().getResource("SQLExceptionGUI.fxml"));
+				Scene mainMenuScene = new Scene(rootMain,800,800);
+				Stage secondaryStage = new Stage();
+				
+				secondaryStage.setScene(mainMenuScene);
+				secondaryStage.show();
+			} catch (IOException ex) {
+				e.printStackTrace();
+			}
 		}
 	}
 	
@@ -74,8 +91,19 @@ public class CageCardDatabase {
 	          
 	          return petID.get(petID.size()-1);
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			Parent rootMain;
+			
+			try {
+				
+				rootMain = FXMLLoader.load(getClass().getClassLoader().getResource("SQLExceptionGUI.fxml"));
+				Scene mainMenuScene = new Scene(rootMain,800,800);
+				Stage secondaryStage = new Stage();
+				
+				secondaryStage.setScene(mainMenuScene);
+				secondaryStage.show();
+			} catch (IOException ex) {
+				e.printStackTrace();
+			}
 		}
 		return -1;
 				
@@ -99,8 +127,19 @@ public class CageCardDatabase {
 	          
 	          return petID.get(petID.size()-1);
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			Parent rootMain;
+			
+			try {
+				
+				rootMain = FXMLLoader.load(getClass().getClassLoader().getResource("SQLExceptionGUI.fxml"));
+				Scene mainMenuScene = new Scene(rootMain,800,800);
+				Stage secondaryStage = new Stage();
+				
+				secondaryStage.setScene(mainMenuScene);
+				secondaryStage.show();
+			} catch (IOException ex) {
+				e.printStackTrace();
+			}
 		}
 		return -1;
 		
