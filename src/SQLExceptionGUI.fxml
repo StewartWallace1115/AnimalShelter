@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="677.0" prefWidth="861.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Pane layoutX="-69.0" layoutY="-86.0" prefHeight="677.0" prefWidth="861.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="686.0" stroke="BLACK" strokeType="INSIDE" width="96.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e5ccff" height="84.0" layoutX="96.0" stroke="BLACK" strokeType="INSIDE" width="768.0" />
+            <Text fill="#e10e0e" layoutX="289.0" layoutY="156.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Warning:">
+               <font>
+                  <Font size="39.0" />
+               </font>
+            </Text>
+            <Text layoutX="150.0" layoutY="219.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A database error has occured.">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Text>
+            <Text layoutX="150.0" layoutY="278.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please contact your manager.">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Text>
+            <Text layoutX="189.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="An error has occured:">
+               <font>
+                  <Font size="58.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -21,10 +21,12 @@ public class AnimalShelterDemo extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		try {
-			System.out.println("color is CCFFFF");
+			
 			Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("LoginGUI.fxml"));
 			
 			Scene scene = new Scene(root,800,800);
+			
+			
 			primaryStage.setScene(scene);
 			primaryStage.show();
 			

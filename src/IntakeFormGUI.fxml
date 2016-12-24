@@ -44,7 +44,7 @@
                         <ToggleGroup fx:id="animalSelection" />
                      </toggleGroup></RadioButton>
                   <RadioButton fx:id="petRadioButton" layoutX="416.0" layoutY="486.0" mnemonicParsing="false" text="Pet" toggleGroup="$animalSelection" />
-                  <Rectangle fx:id="SideRec" arcHeight="5.0" arcWidth="5.0" height="608.0" layoutX="-20.0" layoutY="-35.0" stroke="BLACK" strokeType="INSIDE" width="75.0" />
+                  <Rectangle fx:id="SideRec" arcHeight="5.0" arcWidth="5.0" height="628.0" layoutX="-20.0" layoutY="-35.0" stroke="BLACK" strokeType="INSIDE" width="75.0" />
                   <Rectangle fx:id="TopRect" arcHeight="5.0" arcWidth="5.0" fill="#e5ccff" height="74.0" layoutX="52.0" layoutY="-37.0" stroke="BLACK" strokeType="INSIDE" width="700.0" />
                   <Text layoutX="341.0" layoutY="334.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sex (M/F)" />
                   <TextField fx:id="vaccinationField" layoutX="180.0" layoutY="367.0" prefHeight="31.0" prefWidth="125.0" />

@@ -6,8 +6,8 @@
  * It takes information from the user and inserts it into owner table.
  * 
  */
-import java.io.IOException;
 
+import java.io.IOException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -34,107 +34,178 @@ public class DispositionFormController{
 		  
 	@FXML
 	public void handleSumbitButton(ActionEvent ae){
+		boolean flag = true;
+		boolean nextScreen = false;
 		if(auctionRadio.isSelected()){
-			Owner owner = new Owner();
-			
-			owner.setName(nameField.getText());
-			owner.setAddress(addressField.getText());
-			owner.setZip(Integer.parseInt(zipField.getText()));
-			owner.setPhoneNumber(phoneNumberField.getText());
-			owner.setCity(cityField.getText());
-			
-			owner.setEmail(emailAddressField.getText());
-			
-			OwnerDatabase ownerDB = new OwnerDatabase(owner);
-			feesForm.address = owner.getAddress();
-			feesForm.city = owner.getCity();
-			feesForm.email = owner.getEmail();
-			feesForm.name = owner.getName();
-			feesForm.zip = owner.getZip()+"";
-			feesForm.phoneNumber = owner.getPhoneNumber();
-			feesForm.state = owner.getState();
-			ownerDB.insertReason("auction");
-			feesForm.reason = "auction";
+		 try {
+			do {
+				Owner owner = new Owner();
+				owner.setName(nameField.getText());
+				owner.setAddress(addressField.getText());
+				owner.setZip(Integer.parseInt(zipField.getText()));
+				owner.setPhoneNumber(phoneNumberField.getText());
+				owner.setCity(cityField.getText());
+				owner.setEmail(emailAddressField.getText());
+				OwnerDatabase ownerDB = new OwnerDatabase(owner);
+				feesForm.address = owner.getAddress();
+				feesForm.city = owner.getCity();
+				feesForm.email = owner.getEmail();
+				feesForm.name = owner.getName();
+				feesForm.zip = owner.getZip() + "";
+				feesForm.phoneNumber = owner.getPhoneNumber();
+				feesForm.state = owner.getState();
+				ownerDB.insertReason("auction");
+				feesForm.reason = "auction";
+				flag = false;
+				nextScreen = true;
+			} while (flag);
+		} catch (NumberFormatException e) {
+			Parent rootMain;
+	
+			try {
+				
+				rootMain = FXMLLoader.load(getClass().getClassLoader().getResource("NumberFormatExceptionGUI.fxml"));
+				Scene mainMenuScene = new Scene(rootMain,800,800);
+				Stage secondaryStage = new Stage();
+				
+				secondaryStage.setScene(mainMenuScene);
+				secondaryStage.show();
+			} catch (IOException ex) {
+				e.printStackTrace();
+			}
+		 }
 		}else if(euthanizedRadio.isSelected()){
-			Owner owner = new Owner();
-			
-			owner.setName(nameField.getText());
-			owner.setAddress(addressField.getText());
-			owner.setZip(Integer.parseInt(zipField.getText()));
-			owner.setPhoneNumber(phoneNumberField.getText());
-			owner.setCity(cityField.getText());
-			
-			owner.setEmail(emailAddressField.getText());
-			
-			OwnerDatabase ownerDB = new OwnerDatabase(owner);
-			feesForm.address = owner.getAddress();
-			feesForm.city = owner.getCity();
-			feesForm.email = owner.getEmail();
-			feesForm.name = owner.getName();
-			feesForm.zip = owner.getZip()+"";
-			feesForm.phoneNumber = owner.getPhoneNumber();
-			feesForm.state = owner.getState();
-			ownerDB.insertReason("euthanized");
-			feesForm.reason = "euthanized";
+			try {
+				do {
+					Owner owner = new Owner();
+					owner.setName(nameField.getText());
+					owner.setAddress(addressField.getText());
+					owner.setZip(Integer.parseInt(zipField.getText()));
+					owner.setPhoneNumber(phoneNumberField.getText());
+					owner.setCity(cityField.getText());
+					owner.setEmail(emailAddressField.getText());
+					OwnerDatabase ownerDB = new OwnerDatabase(owner);
+					feesForm.address = owner.getAddress();
+					feesForm.city = owner.getCity();
+					feesForm.email = owner.getEmail();
+					feesForm.name = owner.getName();
+					feesForm.zip = owner.getZip() + "";
+					feesForm.phoneNumber = owner.getPhoneNumber();
+					feesForm.state = owner.getState();
+					ownerDB.insertReason("euthanized");
+					feesForm.reason = "euthanized";
+					flag = false;
+					nextScreen = true;
+				} while (flag);
+			} catch (NumberFormatException e) {
+				Parent rootMain;
+	
+				try {
+					
+					rootMain = FXMLLoader.load(getClass().getClassLoader().getResource("NumberFormatExceptionGUI.fxml"));
+					Scene mainMenuScene = new Scene(rootMain,800,800);
+					Stage secondaryStage = new Stage();
+					
+					secondaryStage.setScene(mainMenuScene);
+					secondaryStage.show();
+				} catch (IOException ex) {
+					e.printStackTrace();
+				}
+			}
 		}else if(adoptedRadio.isSelected()){
-			Owner owner = new Owner();
-			
-			owner.setName(nameField.getText());
-			owner.setAddress(addressField.getText());
-			owner.setZip(Integer.parseInt(zipField.getText()));
-			owner.setPhoneNumber(phoneNumberField.getText());
-			owner.setCity(cityField.getText());
-			
-			owner.setEmail(emailAddressField.getText());
-			
-			OwnerDatabase ownerDB = new OwnerDatabase(owner);
-			feesForm.address = owner.getAddress();
-			feesForm.city = owner.getCity();
-			feesForm.email = owner.getEmail();
-			feesForm.name = owner.getName();
-			feesForm.zip = owner.getZip()+"";
-			feesForm.phoneNumber = owner.getPhoneNumber();
-			feesForm.state = owner.getState();
-			ownerDB.insertReason("adopted");
-			feesForm.reason = "adopted";
+			try {
+				do {
+					Owner owner = new Owner();
+					owner.setName(nameField.getText());
+					owner.setAddress(addressField.getText());
+					owner.setZip(Integer.parseInt(zipField.getText()));
+					owner.setPhoneNumber(phoneNumberField.getText());
+					owner.setCity(cityField.getText());
+					owner.setEmail(emailAddressField.getText());
+					OwnerDatabase ownerDB = new OwnerDatabase(owner);
+					feesForm.address = owner.getAddress();
+					feesForm.city = owner.getCity();
+					feesForm.email = owner.getEmail();
+					feesForm.name = owner.getName();
+					feesForm.zip = owner.getZip() + "";
+					feesForm.phoneNumber = owner.getPhoneNumber();
+					feesForm.state = owner.getState();
+					ownerDB.insertReason("adopted");
+					feesForm.reason = "adopted";
+					flag = false;
+					nextScreen = true;
+				} while (flag);
+			} catch (NumberFormatException e) {
+				Parent rootMain;
+				
+				try {
+					
+					rootMain = FXMLLoader.load(getClass().getClassLoader().getResource("NumberFormatExceptionGUI.fxml"));
+					Scene mainMenuScene = new Scene(rootMain,800,800);
+					Stage secondaryStage = new Stage();
+					
+					secondaryStage.setScene(mainMenuScene);
+					secondaryStage.show();
+				} catch (IOException ex) {
+					
+				}
+			}
 		}else if(reclaimRadio.isSelected()){
-			Owner owner = new Owner();
-			
-			owner.setName(nameField.getText());
-			owner.setAddress(addressField.getText());
-			owner.setZip(Integer.parseInt(zipField.getText()));
-			owner.setPhoneNumber(phoneNumberField.getText());
-			owner.setCity(cityField.getText());
-			
-			owner.setEmail(emailAddressField.getText());
-			
-			OwnerDatabase ownerDB = new OwnerDatabase(owner);
-			
-			feesForm.address = owner.getAddress();
-			feesForm.city = owner.getCity();
-			feesForm.email = owner.getEmail();
-			feesForm.name = owner.getName();
-			feesForm.zip = owner.getZip()+"";
-			feesForm.phoneNumber = owner.getPhoneNumber();
-			feesForm.state = owner.getState();
-			
-			ownerDB.insertReason("reclaim");
-			feesForm.reason = "reclaim";
+			try {
+				do {
+					Owner owner = new Owner();
+					owner.setName(nameField.getText());
+					owner.setAddress(addressField.getText());
+					owner.setZip(Integer.parseInt(zipField.getText()));
+					owner.setPhoneNumber(phoneNumberField.getText());
+					owner.setCity(cityField.getText());
+					owner.setEmail(emailAddressField.getText());
+					OwnerDatabase ownerDB = new OwnerDatabase(owner);
+					feesForm.address = owner.getAddress();
+					feesForm.city = owner.getCity();
+					feesForm.email = owner.getEmail();
+					feesForm.name = owner.getName();
+					feesForm.zip = owner.getZip() + "";
+					feesForm.phoneNumber = owner.getPhoneNumber();
+					feesForm.state = owner.getState();
+					ownerDB.insertReason("reclaim");
+					feesForm.reason = "reclaim";
+					flag = false;
+					nextScreen = true;
+				} while (flag);
+			} catch (NumberFormatException e) {
+				Parent rootMain;
+
+				try {
+					
+					rootMain = FXMLLoader.load(getClass().getClassLoader().getResource("NumberFormatExceptionGUI.fxml"));
+					Scene mainMenuScene = new Scene(rootMain,800,800);
+					Stage secondaryStage = new Stage();
+					
+					secondaryStage.setScene(mainMenuScene);
+					secondaryStage.show();
+				} catch (IOException ex) {
+					
+				}
+			}
 		}
 		
-		Stage countyForm = new Stage();
-		Parent root;
-		try {
-			FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("CountyRegistrationGUI.fxml"));
-			root = loader.load();
-			CountyRegistrationController countyController = loader.getController();
-			countyController.setFeesForm(feesForm);
-			Scene scene = new Scene(root, 800,800);
-			countyForm.setScene(scene);
-			countyForm.show();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+		if (nextScreen) {
+			Stage countyForm = new Stage();
+			Parent root;
+			try {
+				FXMLLoader loader = new FXMLLoader(
+						getClass().getClassLoader().getResource("CountyRegistrationGUI.fxml"));
+				root = loader.load();
+				CountyRegistrationController countyController = loader.getController();
+				countyController.setFeesForm(feesForm);
+				Scene scene = new Scene(root, 800, 800);
+				countyForm.setScene(scene);
+				countyForm.show();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} 
 		}
 		
 	}

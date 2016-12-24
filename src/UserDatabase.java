@@ -5,10 +5,17 @@
  * the userName and password. It also checks if the username exist.
  */
 
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 
 public class UserDatabase {
 	Database database = new Database();
@@ -38,8 +45,20 @@ public class UserDatabase {
 			
 			else return false;
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			Parent rootMain;
+			
+			try {
+				
+				rootMain = FXMLLoader.load(getClass().getClassLoader().getResource("SQLExceptionGUI.fxml"));
+				Scene mainMenuScene = new Scene(rootMain,800,800);
+				Stage secondaryStage = new Stage();
+				
+				secondaryStage.setScene(mainMenuScene);
+				secondaryStage.show();
+			} catch (IOException ex) {
+				
+				e.printStackTrace();
+			}
 		}
 		return false;
 		
@@ -59,8 +78,19 @@ public class UserDatabase {
 			 
 			
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			Parent rootMain;
+			
+			try {
+				
+				rootMain = FXMLLoader.load(getClass().getClassLoader().getResource("SQLExceptionGUI.fxml"));
+				Scene mainMenuScene = new Scene(rootMain,800,800);
+				Stage secondaryStage = new Stage();
+				
+				secondaryStage.setScene(mainMenuScene);
+				secondaryStage.show();
+			} catch (IOException ex) {
+				e.printStackTrace();
+			}
 		}
 		
 	}
@@ -76,8 +106,19 @@ public class UserDatabase {
 			prepareStatement.execute();
 			 
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			Parent rootMain;
+			
+			try {
+				
+				rootMain = FXMLLoader.load(getClass().getClassLoader().getResource("SQLExceptionGUI.fxml"));
+				Scene mainMenuScene = new Scene(rootMain,800,800);
+				Stage secondaryStage = new Stage();
+				
+				secondaryStage.setScene(mainMenuScene);
+				secondaryStage.show();
+			} catch (IOException ex) {
+				e.printStackTrace();
+			}
 		}
 	}
 	
@@ -94,8 +135,45 @@ public class UserDatabase {
 			prepareStatement.execute();
 			 
 		} catch (SQLException e) {
+			Parent rootMain;
+			
+			try {
+				
+				rootMain = FXMLLoader.load(getClass().getClassLoader().getResource("SQLExceptionGUI.fxml"));
+				Scene mainMenuScene = new Scene(rootMain,800,800);
+				Stage secondaryStage = new Stage();
+				
+				secondaryStage.setScene(mainMenuScene);
+				secondaryStage.show();
+			} catch (IOException ex) {
+				e.printStackTrace();
+			}
+			e.printStackTrace();
+		}
+	}
+	
+	public ArrayList<User> displayUsers(){
+		String query = "Select * from User";
+		
+		try {
+			PreparedStatement prepareStatement = conn.prepareStatement(query);
+			ResultSet rs = prepareStatement.executeQuery(query);
+			
+			ArrayList<User> listUsers = new ArrayList<User>();
+			
+			while(rs.next()){
+				user.setUserName(rs.getString(0));
+				user.setPassword(rs.getString(1));
+				
+				listUsers.add(user);
+			}
+			
+			return listUsers;
+		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		return null;
+		
 	}
 }

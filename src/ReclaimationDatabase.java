@@ -1,7 +1,13 @@
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 
 public class ReclaimationDatabase {
 	Database database = new Database();
@@ -42,8 +48,19 @@ public class ReclaimationDatabase {
 			}
 			
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			Parent rootMain;
+			
+			try {
+				
+				rootMain = FXMLLoader.load(getClass().getClassLoader().getResource("SQLExceptionGUI.fxml"));
+				Scene mainMenuScene = new Scene(rootMain,800,800);
+				Stage secondaryStage = new Stage();
+				
+				secondaryStage.setScene(mainMenuScene);
+				secondaryStage.show();
+			} catch (IOException ex) {
+				e.printStackTrace();
+			}
 		}
 		
 		
@@ -70,8 +87,19 @@ public class ReclaimationDatabase {
 			
 			return pet;
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			Parent rootMain;
+			
+			try {
+				
+				rootMain = FXMLLoader.load(getClass().getClassLoader().getResource("SQLExceptionGUI.fxml"));
+				Scene mainMenuScene = new Scene(rootMain,800,800);
+				Stage secondaryStage = new Stage();
+				
+				secondaryStage.setScene(mainMenuScene);
+				secondaryStage.show();
+			} catch (IOException ex) {
+				e.printStackTrace();
+			}
 		}
 		return pet;
 		
@@ -109,8 +137,19 @@ public class ReclaimationDatabase {
 				
 			}
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			Parent rootMain;
+			
+			try {
+				
+				rootMain = FXMLLoader.load(getClass().getClassLoader().getResource("SQLExceptionGUI.fxml"));
+				Scene mainMenuScene = new Scene(rootMain,800,800);
+				Stage secondaryStage = new Stage();
+				
+				secondaryStage.setScene(mainMenuScene);
+				secondaryStage.show();
+			} catch (IOException ex) {
+				e.printStackTrace();
+			}
 		}
 		return pet;
 		
@@ -131,8 +170,19 @@ public class ReclaimationDatabase {
 			
 			return searchIDPet(id);
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			Parent rootMain;
+			
+			try {
+				
+				rootMain = FXMLLoader.load(getClass().getClassLoader().getResource("SQLExceptionGUI.fxml"));
+				Scene mainMenuScene = new Scene(rootMain,800,800);
+				Stage secondaryStage = new Stage();
+				
+				secondaryStage.setScene(mainMenuScene);
+				secondaryStage.show();
+			} catch (IOException ex) {
+				e.printStackTrace();
+			}
 		}
 		return pet;
 		
@@ -163,8 +213,19 @@ public class ReclaimationDatabase {
 				return liveStock;
 			}
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			Parent rootMain;
+			
+			try {
+				
+				rootMain = FXMLLoader.load(getClass().getClassLoader().getResource("SQLExceptionGUI.fxml"));
+				Scene mainMenuScene = new Scene(rootMain,800,800);
+				Stage secondaryStage = new Stage();
+				
+				secondaryStage.setScene(mainMenuScene);
+				secondaryStage.show();
+			} catch (IOException ex) {
+				e.printStackTrace();
+			}
 		}
 		return null;
 		

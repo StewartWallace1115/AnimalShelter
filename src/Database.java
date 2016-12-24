@@ -25,9 +25,9 @@ public class Database {
 
 	    try {
 	      Class.forName(MYSQL_DRIVER);
-	      System.out.println("Class Loaded....");
+	      
 	      con = DriverManager.getConnection(MYSQL_URL,user,password);
-	      System.out.println("Connected to the database....");
+	      
 	      return con;
 	      
 

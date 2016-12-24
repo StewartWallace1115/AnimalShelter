@@ -24,7 +24,6 @@
             <Label layoutX="154.0" layoutY="165.0" text="Username:" />
             <Label layoutX="156.0" layoutY="216.0" text="Password:" />
             <PasswordField fx:id="passwordField" layoutX="235.0" layoutY="212.0" prefHeight="31.0" prefWidth="270.0" />
-            <CheckBox layoutX="366.0" layoutY="258.0" mnemonicParsing="false" text="Show password" />
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="E5CCFF" height="77.0" layoutX="87.0" stroke="BLACK" strokeType="INSIDE" width="721.0" />
             <Label fx:id="loginLabel" layoutX="173.0" layoutY="250.0" prefHeight="21.0" prefWidth="450.0" />
             <Text layoutX="197.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Indian Lake Animal Shelter">

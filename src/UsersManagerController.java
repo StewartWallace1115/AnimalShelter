@@ -11,9 +11,11 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.TableView;
 import javafx.stage.Stage;
 
 public class UsersManagerController{
+	@FXML TableView<User> tableUser;
 	
 	@FXML
 	public void handleAddUserButtonClick(ActionEvent ae){
@@ -67,6 +69,27 @@ public class UsersManagerController{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+	}
+	
+	@FXML
+	public void handleDisplayUsersButton(ActionEvent ae){
+		
+		Stage displayUser = new Stage();
+
+		try {
+			Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("displayUserGUI.fxml"));
+			Scene scene = new Scene(root, 740, 600);
+			displayUser.setScene(scene);
+			displayUser.show();
+			
+			//tableUser.getItems().setAll(col)
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		// TODO Auto-generated catch block
+			
+		
 	}
 	
 }

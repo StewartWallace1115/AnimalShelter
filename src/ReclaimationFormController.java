@@ -27,9 +27,10 @@ public class ReclaimationFormController{
 	@FXML RadioButton liveStockRadioButton;
 		  Pet		  pet;
 		  FeesChargedForm feesForm = new FeesChargedForm();
+		  LiveStock   liveStock;
 	@FXML 
 	public void handleSumbitButton(ActionEvent ae){
-		System.out.println("here");
+		
 		
 		if(petRadioButton.isSelected()){
 			ReclaimationDatabase reclaimationDB = new ReclaimationDatabase();
@@ -43,40 +44,75 @@ public class ReclaimationFormController{
 			feesForm.setNoRabies(pet.vaccinationsCurrent);
 		
 		}else if(liveStockRadioButton.isSelected()){
+			ReclaimationDatabase reclaimationDB = new ReclaimationDatabase();
+			
+			if(!idField.equals("")){
+				liveStock = reclaimationDB.searchVetID(Integer.parseInt(idField.getText()));
+				
+			}
 			feesForm.setDogOrCat(false);
+			
+			
 		}
 		
 		Stage ownerForm = new Stage();
 		Parent root;
-		try {
-			
-			FXMLLoader loader = new FXMLLoader(getClass().getResource("DisplayPetGUI.fxml"));
-			root = (Parent)loader.load();
-			PetDisplayController  displayController = loader.getController();
-            
-            
-            Scene scene = new Scene(root);
-			
-            displayController.nameText.setText(pet.getName());
-            displayController.eyeColorText.setText(pet.getEyeColor());
-           
-            displayController.ageText.setText(pet.getAge() +"");
-            displayController.alteredText.setText(pet.spayedNeutered+"");
-            displayController.breedText.setText(pet.getAnimalBreed());
-            
-       
-            displayController.furColorText.setText(pet.getFurColor());
-            displayController.heightText.setText(pet.getHeight());
-            displayController.weightText.setText(pet.getWeight());
-            displayController.microChipText.setText(pet.microchip+"");
-            displayController.idNumberText.setText(idField.getText());
-            
-            displayController.setFeesChargedForm(feesForm);
-			ownerForm.setScene(scene);
-			ownerForm.show();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+		if (petRadioButton.isSelected()) {
+			try {
+
+				FXMLLoader loader = new FXMLLoader(getClass().getResource("DisplayPetGUI.fxml"));
+				root = (Parent) loader.load();
+				PetDisplayController displayController = loader.getController();
+
+				Scene scene = new Scene(root);
+
+				displayController.nameText.setText(pet.getName());
+				displayController.eyeColorText.setText(pet.getEyeColor());
+
+				displayController.ageText.setText(pet.getAge() + "");
+				displayController.alteredText.setText(pet.spayedNeutered + "");
+				displayController.breedText.setText(pet.getAnimalBreed());
+
+				displayController.furColorText.setText(pet.getFurColor());
+				displayController.heightText.setText(pet.getHeight());
+				displayController.weightText.setText(pet.getWeight());
+				displayController.microChipText.setText(pet.microchip + "");
+				displayController.idNumberText.setText(idField.getText());
+
+				displayController.setFeesChargedForm(feesForm);
+				ownerForm.setScene(scene);
+				ownerForm.show();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} 
+		}else{
+			try {
+
+				FXMLLoader loader = new FXMLLoader(getClass().getResource("DisplayPetGUI.fxml"));
+				root = (Parent) loader.load();
+				PetDisplayController displayController = loader.getController();
+
+				Scene scene = new Scene(root);
+
+				displayController.nameText.setText(liveStock.getName());
+				displayController.eyeColorText.setText(liveStock.getEyeColor());
+
+				displayController.ageText.setText(liveStock.getAge() + "");
+				displayController.breedText.setText(liveStock.getAnimalBreed());
+
+				displayController.furColorText.setText(liveStock.getFurColor());
+				displayController.heightText.setText(liveStock.getHeight());
+				displayController.weightText.setText(liveStock.getWeight());
+				displayController.idNumberText.setText(idField.getText());
+
+				displayController.setFeesChargedForm(feesForm);
+				ownerForm.setScene(scene);
+				ownerForm.show();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} 
 		}
 	}
 	
